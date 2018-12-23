@@ -111,6 +111,17 @@
         {
             height: 200px;
             width: 170px;
+            transition-property: transform;
+            transition-duration: 500ms;
+            transition-delay: 100ms;
+            transition-timing-function: ease-in-out;
+
+        }
+
+        .loga:hover
+        {
+            cursor: pointer;
+            transform: scale(1.2);
 
         }
 
