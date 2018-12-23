@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +13,14 @@
             margin: 0;
         }
         html {
+
             height: 100%;
-            background: url("pozadi.svg") no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: contain;
+            background-image: url("dark.png");
+            background-repeat: no-repeat;
+            background-position: center;
+
+
+
         }
         body{
 
@@ -25,25 +30,51 @@
 
         }
 
-        img {
-            /* Set rules to fill background */
-            min-height: 100%;
-            min-width: 1024px;
-
-            /* Set up proportionate scaling */
-            width: 100%;
-            height: auto;
-
-            /* Set up positioning */
-            position: fixed;
-            top: 0;
-            left: 0;
+        img{
+            width: 100vw;
+            height: 6vh;
         }
+
+        .header
+        {
+            height: 6vh;
+        }
+
+        .middle
+        {
+            flex-grow: 1;
+        }
+
+        .footer
+        {
+            height: 6vh;
+            width: 100vw;
+        }
+
+        .contain
+        {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+        }
+
+
+
     </style>
 </head>
 <body>
 
-<img src="jpg.jpg">
+<div class="contain">
+    <div class="header">
+
+    </div>
+    <div class="middle">
+    
+    </div>
+    <div class="footer">
+        <img src="pruhy.png">
+    </div>
+</div>
 
 </body>
 </html>
