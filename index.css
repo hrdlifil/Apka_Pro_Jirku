@@ -8,7 +8,7 @@
 html
 {
     height: 100%;
-    background-image: url("dark.png");
+    background-image: url("images/dark.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -62,8 +62,7 @@ img#telefon
 
 .header
 {
-    display: flex;
-    flex-direction: column;
+
 }
 
 #pruhy_nahore
@@ -71,7 +70,7 @@ img#telefon
     width: 100vw;
     height: 3vh;
     position: relative;
-    bottom: 2px;
+    bottom: 6px;
 }
 
 .middle
@@ -133,32 +132,108 @@ img#telefon
 
 #biggerfied-picture
 {
-    width: 800px;
-    height: 450px;
+    width: 900px;
+    height: 600px;
     filter: blur(0px) grayscale(0%);
     transform: scale(0);
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
-    position: fixed;
-    top: 15%;
-    left: 25%;
-    background-color: gray;
+    position: absolute;
+    top: 14.3%;
+    left: 50%;
+    margin-left: -450px;
+    background-color: #323436;
     visibility: hidden;
-    z-index: 1000;
+    z-index: 9001;
 }
 
-
-body.biggerfied-picture-visible .contain
+#cross
 {
-    filter: blur(3px) grayscale(100%);
-    transition: filter .5s ease;
+    font-weight: bolder;
+    color: #ff0011;
+    position: absolute;
+    cursor: pointer;
+    top: 4%;
+    left: 2.5%;
+    z-index: 9001;
 }
 
 body.biggerfied-picture-visible #biggerfied-picture
 {
     transform: scale(1);
     visibility: visible;
+}
+
+@media (max-width: 850px)
+{
+    img#logo
+    {
+        left: 6vw;
+    }
+
+    img#telefon
+    {
+        right: 6vw;
+    }
+}
+
+@media (max-width: 700px)
+{
+    #upper_row,#lower_row
+    {
+        width: 100vw;
+
+    }
+}
+
+@media (max-width: 620px)
+{
+    img#logo
+    {
+        left: 8vw;
+    }
+
+    img#telefon
+    {
+        right: 8vw;
+    }
+}
+@media (max-height: 708px)
+{
+    img#logo
+    {
+        transform: scale(1);
+        top: 0;
+    }
+
+    img#telefon
+    {
+        transform: scale(1);
+    }
+}
+
+@media (max-height: 608px)
+{
+    img#logo
+    {
+        top: 0;
+    }
+
+}
+
+@media (max-height: 560px)
+{
+    img#logo
+    {
+        top: -7px;
+    }
+    #upper_row
+    {
+
+        margin-bottom: 0;
+    }
+
 }
 
 
