@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Autoklice</title>
+    <title>Otevirani objektu a domu</title>
     <style>
         *
         {
