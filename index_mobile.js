@@ -6,9 +6,7 @@ class Better_Navigation
 
     logo1_clicked(event)
     {
-        let biggerfiedPicture = document.querySelector("#biggerfied-picture");
-        //biggerfiedPicture.style.backgroundSize = "cover";
-        document.body.classList.add('biggerfied-picture-visible');
+       window.location = "muj_ucet.php"
     }
 
     logo2_clicked(event)

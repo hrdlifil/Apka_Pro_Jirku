@@ -5,9 +5,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Hlavni strana</title>
-    <link rel="stylesheet" href="index_mobile.css" />
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 <div class="contain">
@@ -19,7 +19,7 @@
 
     </div>
     <div class="middle">
-        <a id="eshop-odkaz" href="e-shop.php">
+        <a id="eshop-odkaz" href="muj_ucet.php">
             <img class="loga" id="logo1" src="images/logo1.png">
         </a>
         <a id="ztracene_klice_odkaz" href="ztracene_klice.php">
@@ -48,5 +48,5 @@
     </div>
 </div>
 </body>
-<script src="index_mobile.js"></script>
+<script src="index.js"></script>
 </html>

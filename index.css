@@ -116,11 +116,12 @@ img#zluta
 #cross
 {
     font-weight: bolder;
+    
     color: #ff0011;
     position: absolute;
     cursor: pointer;
-    top: 4%;
-    left: 2.5%;
+    top: 3px;
+    left: 3px;
     z-index: 9001;
 }
 
