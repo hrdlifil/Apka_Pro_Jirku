@@ -2,38 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2cdd6fa-395f-4109-ad9c-8f4cf45a1e8a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/cenik.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-shop.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/otevirani_objektu_a_domu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/otevirani_vozidel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ztracene_klice.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index_mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index_mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index_mobile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autoklice.php" beforeDir="false" afterPath="$PROJECT_DIR$/autoklice.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dark.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo6.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pozadi.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pruhy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/samonil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/samonil.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stažený soubor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/telefon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zluta.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,20 +19,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="autoklice.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autoklice.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="466">
+              <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="index_mobile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index_mobile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+            <state relative-caret-position="297">
+              <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_mobile.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index_mobile.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_mobile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index_mobile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -65,8 +58,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="235">
+              <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -74,8 +67,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3444">
-              <caret line="164" selection-start-line="164" selection-end-line="164" />
+            <state relative-caret-position="445">
+              <caret line="233" column="5" lean-forward="true" selection-start-line="233" selection-start-column="5" selection-end-line="233" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -83,17 +76,8 @@
       <file leaf-file-name="otevirani_objektu_a_domu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/otevirani_objektu_a_domu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
+            <state relative-caret-position="21">
               <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cenik.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cenik.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -125,11 +109,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logo2.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/logo2.svg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -153,8 +132,11 @@
         <option value="$PROJECT_DIR$/otevirani_objektu_a_domu.php" />
         <option value="$PROJECT_DIR$/otevirani_vozidel.php" />
         <option value="$PROJECT_DIR$/images/index.css" />
-        <option value="$PROJECT_DIR$/index.css" />
+        <option value="$PROJECT_DIR$/index_mobile.php" />
+        <option value="$PROJECT_DIR$/index_mobile.js" />
+        <option value="$PROJECT_DIR$/index_mobile.css" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/index.css" />
         <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
@@ -168,8 +150,8 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="175" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="170" />
     <option name="y" value="50" />
     <option name="width" value="1750" />
     <option name="height" value="970" />
@@ -225,7 +207,7 @@
       <updated>1545517600628</updated>
       <workItem from="1545517602074" duration="5188000" />
       <workItem from="1545575900356" duration="16165000" />
-      <workItem from="1545753380824" duration="2687000" />
+      <workItem from="1545753380824" duration="26201000" />
     </task>
     <task id="LOCAL-00001" summary="konecne pokrok">
       <created>1545523722168</created>
@@ -248,26 +230,40 @@
       <option name="project" value="LOCAL" />
       <updated>1545606733657</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="kokot">
+      <created>1545756093133</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1545756093133</updated>
+    </task>
+    <task id="LOCAL-00005" summary="asi nepujde na mobil">
+      <created>1545765888699</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1545765888699</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24040000" />
+    <option name="totallyTimeSpent" value="47554000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="136" y="40" width="1400" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17248322" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19179104" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -289,7 +285,14 @@
     <MESSAGE value="konecne pokrok" />
     <MESSAGE value="jakoz takoz index" />
     <MESSAGE value="přechody" />
-    <option name="LAST_COMMIT_MESSAGE" value="přechody" />
+    <MESSAGE value="kokot" />
+    <MESSAGE value="asi nepujde na mobil" />
+    <option name="LAST_COMMIT_MESSAGE" value="asi nepujde na mobil" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/autoklice.php">
@@ -388,13 +391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/otevirani_objektu_a_domu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/otevirani_vozidel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -412,24 +408,59 @@
     <entry file="file://$PROJECT_DIR$/images/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="9381" column="13" selection-start-line="9381" selection-start-column="13" selection-end-line="9381" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/otevirani_objektu_a_domu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_mobile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+        <state relative-caret-position="466">
+          <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3444">
-          <caret line="164" selection-start-line="164" selection-end-line="164" />
+        <state relative-caret-position="445">
+          <caret line="233" column="5" lean-forward="true" selection-start-line="233" selection-start-column="5" selection-end-line="233" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_mobile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state relative-caret-position="235">
+          <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
         </state>
       </provider>
     </entry>
