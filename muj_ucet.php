@@ -26,10 +26,10 @@
         <form id="prihlasovaci-formular" method="post" action="muj_ucet.php">
             <label for="username" >Uzivatelske jmeno</label>
             <input required  type="text" id="username" name="username">
-            <br>
+
             <label for="password" >Heslo</label>
             <input  required type="password" id="password" name="password">
-            <br>
+
             <input type="submit" name="submit" value="prihlasit se" id="prihlas">
         </form>
 
@@ -43,8 +43,8 @@
             <label for="email" >E-mail</label>
             <input  required type="email" id="email" name="email">
             <br>
-            <label for="telefon" >Telefon</label>
-            <input  required type="text" id="telefon" name="telefon">
+            <label for="phone" >Telefon</label>
+            <input  required type="text" id="phone" name="telefon">
             <br>
             <label for="login" >Uzivatelske jmeno</label>
             <input  required type="text" id="login" name="login">

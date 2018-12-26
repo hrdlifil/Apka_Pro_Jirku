@@ -21,6 +21,7 @@ body
 {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .header
@@ -35,6 +36,7 @@ body
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     flex-grow: 2;
 }
@@ -97,17 +99,10 @@ img#zluta
 
 @media (min-width: 1124px)
 {
-
-
-
     .header
     {
         height: 120px;
     }
-
-
-
-
 
     #logo
     {
@@ -152,4 +147,25 @@ img#zluta
 #registracni-formular
 {
     display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#prihlasovaci-formular
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+label
+{
+    margin-top: 20px;
+}
+
+button
+{
+    margin-top: 20px;
 }
