@@ -1,4 +1,26 @@
 <?php
+
+if(isset($_POST["submit"]))
+{
+
+    $jmeno = $_POST["jmeno"];
+    $prijmeni = $_POST["prijmeni"];
+    $email = $_POST["email"];
+    $telefon = $_POST["telefon"];
+    $login = $_POST["login"];
+    $heslo = $_POST["heslo"];
+
+    if(strlen($jmeno) < 2 || strlen($prijmeni) < 2 || strlen($email) < 5 || strlen($telefon) != 9 || strlen($login) < 5 || strlen($heslo) < 6)
+    {
+
+    }
+    else
+    {
+        header('Location: index.php');
+    }
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -36,23 +58,29 @@
         <form id="registracni-formular" method="post" action="muj_ucet.php">
             <label for="jmeno" >Jmeno</label>
             <input required  type="text" id="jmeno" name="jmeno">
+            <span id="jmeno-spatne" class="spatne">Jméno je příliš krátké</span>
             <br>
             <label for="prijmeni" >Prijmeni</label>
             <input  required type="text" id="prijmeni" name="prijmeni">
+            <span id="prijmeni-spatne" class="spatne">Příjmení je příliš krátké</span>
             <br>
             <label for="email" >E-mail</label>
             <input  required type="email" id="email" name="email">
+            <span id="email-spatne" class="spatne">Zadaný e-mail je neplatný</span>
             <br>
-            <label for="telefon" >Telefon</label>
-            <input  required type="text" id="telefon" name="telefon">
+            <label for="telefon-cislo" >Telefon</label>
+            <input  required type="text" id="telefon-cislo" name="telefon">
+            <span id="telefon-spatne" class="spatne">Telefon nemá správný formát (9 čísel)</span>
             <br>
             <label for="login" >Uzivatelske jmeno</label>
             <input  required type="text" id="login" name="login">
+            <span id="login-spatne" class="spatne">Uživatelské jméno je příliš krátké</span>
             <br>
             <label for="heslo" >Heslo</label>
             <input  required type="password" id="heslo" name="heslo">
+            <span id="heslo-spatne" class="spatne">Heslo je příliš krátké</span>
             <br>
-            <input type="submit" name="submit" value="prihlasit se" id="submit">
+            <input type="submit" name="submit" value="Registrovat se" id="submit">
 
         </form>
     </div>
