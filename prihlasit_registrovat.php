@@ -13,6 +13,8 @@ if(isset($_POST["submit"])) {
     $prijmeni_ok = false;
     $email_ok = false;
     $telefon_ok = false;
+    $username_ok = false;
+    $heslo_ok = false;
 
     if (strlen($jmeno) > 1)
     {
@@ -31,12 +33,28 @@ if(isset($_POST["submit"])) {
     {
         $email_ok = true;
     }
+    if (strlen($heslo)>4)
+    {
+        $heslo_ok = true;
+    }
 
-    if ($jmeno_ok and $prijmeni_ok and $telefon_ok and $email_ok)
+
+
+
+    $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
+    $pdo = new PDO($dsn, "root", "mP4oxnt11");
+    $stmt = $pdo->query("select * from uzivatele where username =".$login);
+   if ($stmt === false)
+   {
+       $username_ok = true;
+   }
+
+    if ($jmeno_ok and $prijmeni_ok and $telefon_ok and $email_ok and $heslo_ok and $username_ok)
     {
         header("Location: muj_ucet.php");
         exit;
     }
+
 
 }
 
@@ -74,7 +92,7 @@ if(isset($_POST["submit"])) {
             <input type="submit" name="submit" value="prihlasit se" id="prihlas">
         </form>
 
-        <form id="registracni-formular" method="post" action="muj_ucet.php">
+        <form id="registracni-formular" method="post" action="prihlasit_registrovat.php">
             <label for="jmeno" >Jmeno</label>
             <input required  type="text" id="jmeno" name="jmeno">
             <span id="jmeno-spatne" class="spatne">Jméno je příliš krátké</span>

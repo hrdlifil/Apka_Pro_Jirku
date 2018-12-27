@@ -71,15 +71,7 @@ function zkontrolovat_udaje(event)
     {
         document.querySelector("#prijmeni-spatne").style.display = "none";
     }
-    if(email.length < 5 || check_email(email) === false)
-    {
-        event.preventDefault();
-        document.querySelector("#email-spatne").style.display = "inline";
-    }
-    else
-    {
-        document.querySelector("#email-spatne").style.display = "none";
-    }
+
     if(telefon_raw.length != 9 || isNaN(telefon))
     {
         event.preventDefault();
@@ -111,21 +103,7 @@ function zkontrolovat_udaje(event)
 
 function check_email(email)
 {
-    let containsDot = false;
 
-    for(let i = 0; i < toString(email).length; i++)
-    {
-        if(email.charAt(i) === '.')
-        {
-            containsDot = true;
-            break;
-        }
-    }
-
-    if(containsDot === false)
-    {
-        return false;
-    }
 
     return true;
 }
