@@ -19,7 +19,7 @@
 
     </div>
     <div class="middle">
-        <a id="eshop-odkaz" href="muj_ucet.php">
+        <a id="eshop-odkaz" href="prihlasit_registrovat.php">
             <img class="loga" id="logo1" src="images/logo1.png">
         </a>
         <a id="ztracene_klice_odkaz" href="ztracene_klice.php">

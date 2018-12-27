@@ -6,7 +6,7 @@ class Better_Navigation
 
     logo1_clicked(event)
     {
-        window.location = "muj_ucet.php"
+        window.location = "prihlasit_registrovat.php"
     }
     logo2_clicked(event)
     {
