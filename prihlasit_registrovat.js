@@ -80,7 +80,7 @@ function zkontrolovat_udaje(event)
     {
         document.querySelector("#email-spatne").style.display = "none";
     }
-    if(/*telefon < 100000000 || telefon > 999999999*/ telefon_raw.length != 9 || isNaN(telefon))
+    if(telefon_raw.length != 9 || isNaN(telefon))
     {
         event.preventDefault();
         document.querySelector("#telefon-spatne").style.display = "inline";
@@ -98,7 +98,7 @@ function zkontrolovat_udaje(event)
     {
         document.querySelector("#login-spatne").style.display = "none";
     }
-    if(heslo.length < 6)
+    if(heslo.length < 5)
     {
         event.preventDefault();
         document.querySelector("#heslo-spatne").style.display = "inline";
@@ -111,22 +111,9 @@ function zkontrolovat_udaje(event)
 
 function check_email(email)
 {
-    let a = 0;
-
-    let containsAt = false;
     let containsDot = false;
 
     for(let i = 0; i < toString(email).length; i++)
-    {
-        if(email.charAt(i) === '@')
-        {
-            containsAt = true;
-            a = i;
-            break;
-        }
-    }
-
-    for(let i = a; i < toString(email).length; i++)
     {
         if(email.charAt(i) === '.')
         {
@@ -135,7 +122,7 @@ function check_email(email)
         }
     }
 
-    if(containsAt === false || containsDot === false)
+    if(containsDot === false)
     {
         return false;
     }
