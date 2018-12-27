@@ -1,6 +1,7 @@
 let stav = "prihlasit se";
 
-let formular = document.querySelector("#registracni-formular");
+let registracni_formular = document.querySelector("#registracni-formular");
+let prihlasovaci_formular = document.querySelector("#prihlasovaci-formular");
 
 let prihlasit_se_btn = document.querySelector(".prihlasit");
 let registrovat_se_btn = document.querySelector(".registrovat");
@@ -8,7 +9,8 @@ let registrovat_se_btn = document.querySelector(".registrovat");
 prihlasit_se_btn.addEventListener("click", zobrazit_prihlasovaci_formular);
 registrovat_se_btn.addEventListener("click", zobrazit_registrovaci_formular);
 
-formular.addEventListener("submit", zkontrolovat_udaje);
+prihlasovaci_formular.addEventListener("submit", zkontrolovat_prihlasovaci_udaje);
+registracni_formular.addEventListener("submit", zkontrolovat_registracni_udaje);
 
 function zobrazit_prihlasovaci_formular(event)
 {
@@ -42,7 +44,32 @@ function zobrazit_registrovaci_formular(event)
 
 }
 
-function zkontrolovat_udaje(event)
+function zkontrolovat_prihlasovaci_udaje(event)
+{
+    let username = document.querySelector("#username").value;
+    let heslo = document.querySelector("#password").value;
+
+    if(username.length < 5)
+    {
+        event.preventDefault();
+        document.querySelector("#login-spatne-prihlaseni").style.display = "inline";
+    }
+    else
+    {
+        document.querySelector("#login-spatne-prihlaseni").style.display = "none";
+    }
+    if(heslo.length < 5)
+    {
+        event.preventDefault();
+        document.querySelector("#heslo-spatne-prihlaseni").style.display = "inline";
+    }
+    else
+    {
+        document.querySelector("#heslo-spatne").style.display = "none";
+    }
+}
+
+function zkontrolovat_registracni_udaje(event)
 {
     let jmeno = document.querySelector("#jmeno").value;
     let prijmeni = document.querySelector("#prijmeni").value;

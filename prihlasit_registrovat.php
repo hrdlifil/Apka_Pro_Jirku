@@ -1,5 +1,6 @@
 ﻿<?php
 $username_uz_existuje = false;
+$neprihlasen = false;
 
 function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
 {
@@ -11,8 +12,52 @@ function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
     $stmt->execute(["jmeno" => $jmeno, "prijmeni" => $prijmeni,"telefon"=> $telefon ,"email" => $email, "username" => $username, "heslo" => $zahashovane_heslo]);
 }
 
-if(isset($_POST["submit"])) {
+if(isset($_POST["submit-prihlaseni"]))
+{
+    $login_ok = false;
+    $heslo_ok = false;
 
+    $login = $_POST["username"];
+    $heslo = $_POST["password"];
+    $heslo_k_zahashovani = $login.$heslo;
+
+    if (strlen($login) > 4)
+    {
+        $login_ok = true;
+    }
+    if (strlen($heslo) > 4)
+    {
+        $heslo_ok = true;
+    }
+
+    if($login_ok == true and $heslo_ok == true)
+    {
+        $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
+        $pdo = new PDO($dsn, "root", "mP4oxnt11");
+        $stmt = $pdo->prepare("select * from uzivatele where username=:login");
+
+        $hashed = password_hash($heslo_k_zahashovani, PASSWORD_DEFAULT);
+
+        $stmt->execute(["login" => $login]);
+
+        $user = $stmt->fetch(PDO::FETCH_OBJ);
+
+        if($user != null and password_verify($heslo_k_zahashovani, $user->heslo))
+        {
+            $neprihlasen = false;
+            header("Location: muj_ucet.php");
+            exit;
+        }
+        else
+        {
+            $neprihlasen = true;
+        }
+
+    }
+}
+
+if(isset($_POST["submit"]))
+{
     $jmeno = $_POST["jmeno"];
     $prijmeni = $_POST["prijmeni"];
     $email = $_POST["email"];
@@ -45,7 +90,7 @@ if(isset($_POST["submit"])) {
     {
         $email_ok = true;
     }
-    if (strlen($heslo)>4)
+    if (strlen($heslo)> 4)
     {
         $heslo_ok = true;
     }
@@ -100,14 +145,16 @@ if(isset($_POST["submit"])) {
             <input class="prihlasit" type="button" value="prihlasit se">
             <input class="registrovat" type="button" value="registrovat se">
         </div>
-        <form id="prihlasovaci-formular" method="post" action="muj_ucet.php">
+        <form id="prihlasovaci-formular" method="post" action="prihlasit_registrovat.php">
             <label for="username" >Uzivatelske jmeno</label>
             <input required  type="text" id="username" name="username">
+            <span id="login-spatne-prihlaseni" class="spatne">Uživatelské jméno je příliš krátké</span>
             <br>
             <label for="password" >Heslo</label>
             <input  required type="password" id="password" name="password">
+            <span id="heslo-spatne-prihlaseni" class="spatne">Heslo je příliš krátké</span>
             <br>
-            <input type="submit" name="submit" value="prihlasit se" id="prihlas">
+            <input type="submit" name="submit-prihlaseni" value="prihlasit se" id="prihlas">
         </form>
 
         <form id="registracni-formular" method="post" action="prihlasit_registrovat.php">
@@ -139,10 +186,28 @@ if(isset($_POST["submit"])) {
 
         </form>
         <div class="msg-username-existuje">
-            <?Php if ($username_uz_existuje)
+            <?php
+            if ($username_uz_existuje)
             {
                 echo "Uzivatelske jmeno jiz existuje, zadejte prosim jine";
-            }?>
+            }
+            if($neprihlasen and isset($_POST["submit-prihlaseni"]))
+            {
+                echo "Přihlášení se nezdařilo";
+            }
+            ?>
+        </div>
+        <div class="msg-username-existuje">
+            <?php
+            if ($username_uz_existuje)
+            {
+                echo "Uzivatelske jmeno jiz existuje, zadejte prosim jine";
+            }
+            if($neprihlasen and isset($_POST["submit-prihlaseni"]))
+            {
+                echo "Přihlášení se nezdařilo";
+            }
+            ?>
         </div>
     </div>
     <div class="footer">
