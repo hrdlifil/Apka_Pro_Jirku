@@ -48,10 +48,10 @@ if(isset($_POST["submit"]))
         <form id="prihlasovaci-formular" method="post" action="muj_ucet.php">
             <label for="username" >Uzivatelske jmeno</label>
             <input required  type="text" id="username" name="username">
-            <br>
+
             <label for="password" >Heslo</label>
             <input  required type="password" id="password" name="password">
-            <br>
+
             <input type="submit" name="submit" value="prihlasit se" id="prihlas">
         </form>
 
@@ -68,9 +68,14 @@ if(isset($_POST["submit"]))
             <input  required type="email" id="email" name="email">
             <span id="email-spatne" class="spatne">Zadaný e-mail je neplatný</span>
             <br>
+<<<<<<< HEAD
             <label for="telefon-cislo" >Telefon</label>
             <input  required type="text" id="telefon-cislo" name="telefon">
             <span id="telefon-spatne" class="spatne">Telefon nemá správný formát (9 čísel)</span>
+=======
+            <label for="phone" >Telefon</label>
+            <input  required type="text" id="phone" name="telefon">
+>>>>>>> f847abf28d76cef8082b5b377525ab34ff1049d0
             <br>
             <label for="login" >Uzivatelske jmeno</label>
             <input  required type="text" id="login" name="login">

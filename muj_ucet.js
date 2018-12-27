@@ -19,7 +19,7 @@ function zobrazit_prihlasovaci_formular(event)
     else
     {
         document.querySelector("#registracni-formular").style.display = "none";
-        document.querySelector("#prihlasovaci-formular").style.display = "block";
+        document.querySelector("#prihlasovaci-formular").style.display = "flex";
 
         stav = "prihlasit se";
     }
@@ -34,7 +34,7 @@ function zobrazit_registrovaci_formular(event)
     else
     {
         document.querySelector("#prihlasovaci-formular").style.display = "none";
-        document.querySelector("#registracni-formular").style.display = "block";
+        document.querySelector("#registracni-formular").style.display = "flex";
 
 
         stav = "registrovat se";

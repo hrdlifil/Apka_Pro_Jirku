@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2cdd6fa-395f-4109-ad9c-8f4cf45a1e8a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/e-shop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/muj_ucet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/muj_ucet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/muj_ucet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-shop.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/index_mobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_mobile.php" beforeDir="false" afterPath="$PROJECT_DIR$/index_mobile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muj_ucet.css" beforeDir="false" afterPath="$PROJECT_DIR$/muj_ucet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muj_ucet.js" beforeDir="false" afterPath="$PROJECT_DIR$/muj_ucet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muj_ucet.php" beforeDir="false" afterPath="$PROJECT_DIR$/muj_ucet.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="muj_ucet.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="muj_ucet.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/muj_ucet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="38" />
+            <state relative-caret-position="535">
+              <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -89,17 +82,17 @@
       <file leaf-file-name="muj_ucet.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/muj_ucet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="151" selection-start-line="151" selection-end-line="151" selection-end-column="21" />
+            <state relative-caret-position="297">
+              <caret line="151" column="24" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="muj_ucet.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="muj_ucet.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/muj_ucet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="483">
+              <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -144,8 +137,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/muj_ucet.css" />
-        <option value="$PROJECT_DIR$/muj_ucet.php" />
         <option value="$PROJECT_DIR$/muj_ucet.js" />
+        <option value="$PROJECT_DIR$/muj_ucet.php" />
       </list>
     </option>
   </component>
@@ -216,7 +209,7 @@
       <workItem from="1545517602074" duration="5188000" />
       <workItem from="1545575900356" duration="16165000" />
       <workItem from="1545753380824" duration="28474000" />
-      <workItem from="1545850175149" duration="3512000" />
+      <workItem from="1545850175149" duration="7235000" />
     </task>
     <task id="LOCAL-00001" summary="konecne pokrok">
       <created>1545523722168</created>
@@ -260,11 +253,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545787089378</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="AF">
+      <created>1545856091053</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545856091053</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53339000" />
+    <option name="totallyTimeSpent" value="57062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -304,7 +304,8 @@
     <MESSAGE value="kokot" />
     <MESSAGE value="asi nepujde na mobil" />
     <MESSAGE value="komplet responzivita (snad)" />
-    <option name="LAST_COMMIT_MESSAGE" value="komplet responzivita (snad)" />
+    <MESSAGE value="AF" />
+    <option name="LAST_COMMIT_MESSAGE" value="AF" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -545,24 +546,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/muj_ucet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/muj_ucet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="151" selection-start-line="151" selection-end-line="151" selection-end-column="21" />
+        <state relative-caret-position="297">
+          <caret line="151" column="24" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/muj_ucet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/muj_ucet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="535">
+          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
         </state>
       </provider>
     </entry>
