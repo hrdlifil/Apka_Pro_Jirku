@@ -1,4 +1,15 @@
 ﻿<?php
+$username_uz_existuje = false;
+
+function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
+{
+    $heslo_na_hashovani = $username.$heslo;
+    $zahashovane_heslo = password_hash($heslo_na_hashovani, PASSWORD_DEFAULT);
+    $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
+    $pdo = new PDO($dsn, "root", "mP4oxnt11");
+    $stmt = $pdo->prepare("insert into uzivatele(jmeno,prijmeni,telefon,email,username,heslo) values(:jmeno,:prijmeni,:telefon,:email,:username,:heslo)");
+    $stmt->execute(["jmeno" => $jmeno, "prijmeni" => $prijmeni,"telefon"=> $telefon ,"email" => $email, "username" => $username, "heslo" => $zahashovane_heslo]);
+}
 
 if(isset($_POST["submit"])) {
 
@@ -8,6 +19,7 @@ if(isset($_POST["submit"])) {
     $telefon = $_POST["telefon"];
     $login = $_POST["login"];
     $heslo = $_POST["heslo"];
+
 
     $jmeno_ok = false;
     $prijmeni_ok = false;
@@ -38,23 +50,29 @@ if(isset($_POST["submit"])) {
         $heslo_ok = true;
     }
 
-
-
-
     $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
     $pdo = new PDO($dsn, "root", "mP4oxnt11");
-    $stmt = $pdo->query("select * from uzivatele where username =".$login);
-   if ($stmt === false)
-   {
-       $username_ok = true;
-   }
+    $stmt = $pdo->prepare("select * from uzivatele where username=:login");
+    $stmt->execute(["login" => $login]);
+
+    $user = $stmt->fetch();
+
+    if ($user == null)
+    {
+        $username_ok = true;
+    }
 
     if ($jmeno_ok and $prijmeni_ok and $telefon_ok and $email_ok and $heslo_ok and $username_ok)
     {
+        zaregistruj($jmeno, $prijmeni, $telefon, $email, $login, $heslo);
+        $username_uz_existuje = false;
         header("Location: muj_ucet.php");
         exit;
-    }
+    }else
+        {
+            $username_uz_existuje = true;
 
+        }
 
 }
 
@@ -120,6 +138,12 @@ if(isset($_POST["submit"])) {
             <input type="submit" name="submit" value="Registrovat se" id="submit">
 
         </form>
+        <div class="msg-username-existuje">
+            <?Php if ($username_uz_existuje)
+            {
+                echo "Uzivatelske jmeno jiz existuje, zadejte prosim jine";
+            }?>
+        </div>
     </div>
     <div class="footer">
         <img id="pruhy" src="images/pruhy.png">
