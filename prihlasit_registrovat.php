@@ -4,6 +4,16 @@ $neprihlasen = false;
 $login_ok = true;
 $password_ok = true;
 
+$username = "";
+$password = "";
+
+$jmeno = "";
+$prijmeni = "";
+$email = "";
+$telefon = "";
+$login = "";
+$heslo = "";
+
 function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
 {
     $heslo_na_hashovani = $username.$heslo;
@@ -18,15 +28,15 @@ if(isset($_POST["submit-prihlaseni"]))
 {
     $login_ok = false;
     $password_ok = false;
-    $login = $_POST["username"];
-    $heslo = $_POST["password"];
-    $heslo_k_zahashovani = $login.$heslo;
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $heslo_k_zahashovani = $username.$password;
 
-    if (strlen($login) > 4)
+    if (strlen($username) > 4)
     {
         $login_ok = true;
     }
-    if (strlen($heslo) > 4)
+    if (strlen($password) > 4)
     {
         $password_ok = true;
     }
@@ -39,7 +49,7 @@ if(isset($_POST["submit-prihlaseni"]))
 
         $hashed = password_hash($heslo_k_zahashovani, PASSWORD_DEFAULT);
 
-        $stmt->execute(["login" => $login]);
+        $stmt->execute(["login" => $username]);
 
         $user = $stmt->fetch(PDO::FETCH_OBJ);
 
@@ -150,17 +160,17 @@ if(isset($_POST["submit"]))
         </div>
         <form id="prihlasovaci-formular" method="post" action="prihlasit_registrovat.php">
             <label for="username" >Uzivatelske jmeno</label>
-            <input required  type="text" id="username" name="username">
+            <input required  type="text" id="username" name="username" value="<?php echo $username ?>">
             <span id="login-spatne-prihlaseni" class="spatne">Uživatelské jméno je příliš krátké</span>
-            <?Php if($login_ok == false)
+            <?php if($login_ok == false)
             {
                 echo "<span>Uživatelské jméno je příliš krátké</span>";
             } ?>
             <br>
             <label for="password" >Heslo</label>
-            <input  required type="password" id="password" name="password">
+            <input  required type="password" id="password" name="password" value="<?php echo $password ?>">
             <span id="heslo-spatne-prihlaseni" class="spatne">Heslo je příliš krátké</span>
-            <?Php if($password_ok == false)
+            <?php if($password_ok == false)
             {
                 echo " <span>Heslo je příliš krátké</span>";
             } ?>
@@ -170,27 +180,27 @@ if(isset($_POST["submit"]))
 
         <form id="registracni-formular" method="post" action="prihlasit_registrovat.php">
             <label for="jmeno" >Jmeno</label>
-            <input required  type="text" id="jmeno" name="jmeno">
+            <input required  type="text" id="jmeno" name="jmeno"  value="<?php echo $jmeno ?>">
             <span id="jmeno-spatne" class="spatne">Jméno je příliš krátké</span>
             <br>
             <label for="prijmeni" >Prijmeni</label>
-            <input  required type="text" id="prijmeni" name="prijmeni">
+            <input  required type="text" id="prijmeni" name="prijmeni" value="<?php echo $prijmeni ?>">
             <span id="prijmeni-spatne" class="spatne">Příjmení je příliš krátké</span>
             <br>
             <label for="email" >E-mail</label>
-            <input  required type="email" id="email" name="email">
+            <input  required type="email" id="email" name="email" value="<?php echo $email ?>">
             <span id="email-spatne" class="spatne">Zadaný e-mail je neplatný</span>
             <br>
             <label for="telefon-cislo" >Telefon</label>
-            <input  required type="text" id="telefon-cislo" name="telefon">
+            <input  required type="text" id="telefon-cislo" name="telefon" value="<?php echo $telefon ?>">
             <span id="telefon-spatne" class="spatne">Telefon nemá správný formát (9 čísel)</span>
             <br>
             <label for="login" >Uzivatelske jmeno</label>
-            <input  required type="text" id="login" name="login">
+            <input  required type="text" id="login" name="login" value="<?php echo $login ?>">
             <span id="login-spatne" class="spatne">Uživatelské jméno je příliš krátké</span>
             <br>
             <label for="heslo" >Heslo</label>
-            <input  required type="password" id="heslo" name="heslo">
+            <input  required type="password" id="heslo" name="heslo" value="<?php echo $heslo ?>">
             <span id="heslo-spatne" class="spatne">Heslo je příliš krátké</span>
             <br>
             <input type="submit" name="submit" value="Registrovat se" id="submit">
