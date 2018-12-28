@@ -140,17 +140,16 @@ if(isset($_POST["submit"]))
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Hlavni strana</title>
-    <link rel="stylesheet" href="prihlasit_registrovat.css" />
+    <title>Prihlaseni a registrace</title>
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 <div class="contain">
     <div class="header">
-        <img id="zluta" src="images/zluta.png"/>
-        <img id="pruhy_nahore" src="images/pruhy.png"/>
-        <img id="logo" src="images/samonil.svg"/>
-        <img id="telefon" src="images/telefon.svg"/>
+        <img id="zluta" src="images/zluta.png" alt="Žlutá"/>
+        <img id="pruhy_nahore" src="images/pruhy.png" alt="Pruhy"/>
+        <img id="logo" src="images/samonil.svg" alt="Jiří Šamonil"/>
+        <img id="telefon" src="images/telefon.svg" alt="Telefon: 602238172"/>
 
     </div>
     <div class="middle">
@@ -221,9 +220,9 @@ if(isset($_POST["submit"]))
 
     </div>
     <div class="footer">
-        <img id="pruhy" src="images/pruhy.png">
+        <img id="pruhy" src="images/pruhy.png" alt="Pruhy">
     </div>
 </div>
-</body>
 <script src="prihlasit_registrovat.js"></script>
+</body>
 </html>

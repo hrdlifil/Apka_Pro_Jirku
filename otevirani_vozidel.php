@@ -147,14 +147,18 @@
 <body>
 <div class="contain">
     <div class="header">
-        <img id="zluta" src="zluta.png"><img id="logo" src="samonil.svg"><img id="telefon" src="telefon.svg"><img id="pruhy_nahore" src="pruhy.png">
+        <img id="zluta" src="images/zluta.png" alt="Žlutá"/>
+        <img id="pruhy_nahore" src="images/pruhy.png" alt="Pruhy"/>
+        <img id="logo" src="images/samonil.svg" alt="Jiří Šamonil"/>
+        <img id="telefon" src="images/telefon.svg" alt="Telefon: 602238172"/>
+
     </div>
     <div class="middle">
 
 
     </div>
     <div class="footer">
-        <img id="pruhy" src="pruhy.png">
+        <img id="pruhy" src="pruhy.png" alt="Pruhy">
     </div>
 </div>
 </body>
