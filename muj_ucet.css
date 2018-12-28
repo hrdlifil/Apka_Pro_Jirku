@@ -1,0 +1,174 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html
+{
+    height: 100%;
+    background-image: url("images/dark.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body
+{
+    height: 100%;
+}
+
+.contain
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header
+{
+    position: relative;
+    overflow: hidden;
+    height: 151px;
+
+}
+.middle
+{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 2;
+}
+
+img#pruhy
+{
+    width: 100vw;
+    height: 22.63px;
+    position: fixed;
+    bottom: 0px;
+
+}
+
+#pruhy_nahore
+{
+    width: 100vw;
+    height: 22.08px;
+    position: fixed;
+    top: 129px;
+}
+
+img#zluta
+{
+    position: fixed;
+    height: 130px;
+    width: 100%;
+
+}
+
+#logo
+{
+
+    width: 310.8px;
+    height: 81.66px;
+    position: fixed;
+    left: 50%;
+    margin-left: -155.4px ;
+
+    top: 15px;
+}
+
+#telefon
+{
+    width: 310.8px;
+    height: 42.65px;
+    position: fixed;
+    right: 50%;
+    margin-right: -155.4px ;
+
+    top: 95px;
+
+}
+
+.spatne
+{
+    display: none;
+}
+
+
+
+
+
+
+@media (min-width: 1124px)
+{
+    .header
+    {
+        height: 120px;
+    }
+
+    #logo
+    {
+        height: 70px;
+        width: 225px;
+        position: fixed;
+        top: 0;
+        left: 3vw;
+        margin-left: 0;
+    }
+
+    #telefon
+    {
+        height: 70px;
+        width: 225px;
+        position: fixed;
+        top: 0.8vh;
+        right: 3vw;
+        margin-right: 0;
+
+
+    }
+
+    #pruhy_nahore
+    {
+
+        height: 22.63px;
+        position: fixed;
+        top: 67px;
+
+    }
+
+
+    img#zluta
+    {
+        width: 100%;
+        height: 67.89px;
+    }
+
+}
+
+#registracni-formular
+{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#prihlasovaci-formular
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+label
+{
+    margin-top: 20px;
+}
+
+button
+{
+    margin-top: 20px;
+}

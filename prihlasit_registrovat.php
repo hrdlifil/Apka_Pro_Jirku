@@ -1,6 +1,8 @@
 ﻿<?php
 $username_uz_existuje = false;
 $neprihlasen = false;
+$login_ok = true;
+$password_ok = true;
 
 function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
 {
@@ -15,8 +17,7 @@ function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
 if(isset($_POST["submit-prihlaseni"]))
 {
     $login_ok = false;
-    $heslo_ok = false;
-
+    $password_ok = false;
     $login = $_POST["username"];
     $heslo = $_POST["password"];
     $heslo_k_zahashovani = $login.$heslo;
@@ -27,10 +28,10 @@ if(isset($_POST["submit-prihlaseni"]))
     }
     if (strlen($heslo) > 4)
     {
-        $heslo_ok = true;
+        $password_ok = true;
     }
 
-    if($login_ok == true and $heslo_ok == true)
+    if($login_ok == true and $password_ok == true)
     {
         $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
         $pdo = new PDO($dsn, "root", "mP4oxnt11");
@@ -45,6 +46,8 @@ if(isset($_POST["submit-prihlaseni"]))
         if($user != null and password_verify($heslo_k_zahashovani, $user->heslo))
         {
             $neprihlasen = false;
+            session_start();
+            $_SESSION["user"] = $user;
             header("Location: muj_ucet.php");
             exit;
         }
@@ -149,10 +152,18 @@ if(isset($_POST["submit"]))
             <label for="username" >Uzivatelske jmeno</label>
             <input required  type="text" id="username" name="username">
             <span id="login-spatne-prihlaseni" class="spatne">Uživatelské jméno je příliš krátké</span>
+            <?Php if($login_ok == false)
+            {
+                echo "<span>Uživatelské jméno je příliš krátké</span>";
+            } ?>
             <br>
             <label for="password" >Heslo</label>
             <input  required type="password" id="password" name="password">
             <span id="heslo-spatne-prihlaseni" class="spatne">Heslo je příliš krátké</span>
+            <?Php if($password_ok == false)
+            {
+                echo " <span>Heslo je příliš krátké</span>";
+            } ?>
             <br>
             <input type="submit" name="submit-prihlaseni" value="prihlasit se" id="prihlas">
         </form>
@@ -197,18 +208,7 @@ if(isset($_POST["submit"]))
             }
             ?>
         </div>
-        <div class="msg-username-existuje">
-            <?php
-            if ($username_uz_existuje)
-            {
-                echo "Uzivatelske jmeno jiz existuje, zadejte prosim jine";
-            }
-            if($neprihlasen and isset($_POST["submit-prihlaseni"]))
-            {
-                echo "Přihlášení se nezdařilo";
-            }
-            ?>
-        </div>
+
     </div>
     <div class="footer">
         <img id="pruhy" src="images/pruhy.png">
