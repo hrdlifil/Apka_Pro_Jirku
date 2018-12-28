@@ -3,17 +3,14 @@ $username_uz_existuje = false;
 $neprihlasen = false;
 $login_ok = true;
 $password_ok = true;
-
 $username = "";
 $password = "";
-
 $jmeno = "";
 $prijmeni = "";
 $email = "";
 $telefon = "";
 $login = "";
 $heslo = "";
-
 function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
 {
     $heslo_na_hashovani = $username.$heslo;
@@ -23,7 +20,6 @@ function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
     $stmt = $pdo->prepare("insert into uzivatele(jmeno,prijmeni,telefon,email,username,heslo) values(:jmeno,:prijmeni,:telefon,:email,:username,:heslo)");
     $stmt->execute(["jmeno" => $jmeno, "prijmeni" => $prijmeni,"telefon"=> $telefon ,"email" => $email, "username" => $username, "heslo" => $zahashovane_heslo]);
 }
-
 if(isset($_POST["submit-prihlaseni"]))
 {
     $login_ok = false;
@@ -31,7 +27,6 @@ if(isset($_POST["submit-prihlaseni"]))
     $username = $_POST["username"];
     $password = $_POST["password"];
     $heslo_k_zahashovani = $username.$password;
-
     if (strlen($username) > 4)
     {
         $login_ok = true;
@@ -40,19 +35,14 @@ if(isset($_POST["submit-prihlaseni"]))
     {
         $password_ok = true;
     }
-
     if($login_ok == true and $password_ok == true)
     {
         $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
         $pdo = new PDO($dsn, "root", "mP4oxnt11");
         $stmt = $pdo->prepare("select * from uzivatele where username=:login");
-
         $hashed = password_hash($heslo_k_zahashovani, PASSWORD_DEFAULT);
-
         $stmt->execute(["login" => $username]);
-
         $user = $stmt->fetch(PDO::FETCH_OBJ);
-
         if($user != null and password_verify($heslo_k_zahashovani, $user->heslo))
         {
             $neprihlasen = false;
@@ -65,10 +55,8 @@ if(isset($_POST["submit-prihlaseni"]))
         {
             $neprihlasen = true;
         }
-
     }
 }
-
 if(isset($_POST["submit"]))
 {
     $jmeno = $_POST["jmeno"];
@@ -77,20 +65,16 @@ if(isset($_POST["submit"]))
     $telefon = $_POST["telefon"];
     $login = $_POST["login"];
     $heslo = $_POST["heslo"];
-
-
     $jmeno_ok = false;
     $prijmeni_ok = false;
     $email_ok = false;
     $telefon_ok = false;
     $username_ok = false;
     $heslo_ok = false;
-
     if (strlen($jmeno) > 1)
     {
         $jmeno_ok = true;
     }
-
     if (strlen($prijmeni) > 1)
     {
         $prijmeni_ok = true;
@@ -107,19 +91,15 @@ if(isset($_POST["submit"]))
     {
         $heslo_ok = true;
     }
-
     $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
     $pdo = new PDO($dsn, "root", "mP4oxnt11");
     $stmt = $pdo->prepare("select * from uzivatele where username=:login");
     $stmt->execute(["login" => $login]);
-
     $user = $stmt->fetch();
-
     if ($user == null)
     {
         $username_ok = true;
     }
-
     if ($jmeno_ok and $prijmeni_ok and $telefon_ok and $email_ok and $heslo_ok and $username_ok)
     {
         zaregistruj($jmeno, $prijmeni, $telefon, $email, $login, $heslo);
@@ -129,19 +109,16 @@ if(isset($_POST["submit"]))
     }else
         {
             $username_uz_existuje = true;
-
         }
-
 }
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prihlaseni a registrace</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Hlavni strana</title>
+    <link rel="stylesheet" href="prihlasit_registrovat.css" />
 </head>
 <body>
 <div class="contain">

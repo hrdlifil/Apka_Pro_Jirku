@@ -65,7 +65,7 @@ function zkontrolovat_prihlasovaci_udaje(event)
     }
     else
     {
-        document.querySelector("#heslo-spatne").style.display = "none";
+        document.querySelector("#heslo-spatne-prihlaseni").style.display = "none";
     }
 }
 
@@ -98,7 +98,15 @@ function zkontrolovat_registracni_udaje(event)
     {
         document.querySelector("#prijmeni-spatne").style.display = "none";
     }
-
+    if(email.length < 5 || !email.includes("."))
+    {
+        event.preventDefault();
+        document.querySelector("#email-spatne").style.display = "inline";
+    }
+    else
+    {
+        document.querySelector("#email-spatne").style.display = "none";
+    }
     if(telefon_raw.length != 9 || isNaN(telefon))
     {
         event.preventDefault();
@@ -126,11 +134,4 @@ function zkontrolovat_registracni_udaje(event)
     {
         document.querySelector("#heslo-spatne").style.display = "none";
     }
-}
-
-function check_email(email)
-{
-
-
-    return true;
 }

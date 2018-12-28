@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Created by PhpStorm.
  * User: filip
@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hlavni strana</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="muj_ucet.css" />
 </head>
 <body>
 <div class="contain">
