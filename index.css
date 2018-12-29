@@ -238,3 +238,30 @@ body.biggerfied-picture-visible #biggerfied-picture
     }
 
 }
+
+@media print
+{
+    html
+    {
+        height: 100%;
+    }
+
+    .middle
+    {
+
+        flex-direction: row;
+
+
+
+    }
+    .loga
+    {
+        width: 130px;
+        height: 160px;
+        margin-top: 50%;
+        margin-bottom: 0;
+    }
+
+
+
+}
