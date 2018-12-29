@@ -117,7 +117,7 @@ if(isset($_POST["submit"]))
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hlavni strana</title>
+    <title>Prihlaseni a registrace</title>
     <link rel="stylesheet" href="prihlasit_registrovat.css" />
 </head>
 <body>
@@ -136,7 +136,7 @@ if(isset($_POST["submit"]))
         </div>
         <form id="prihlasovaci-formular" method="post" action="prihlasit_registrovat.php">
             <label for="username" >Uzivatelske jmeno</label>
-            <input required  type="text" id="username" name="username" value="<?php echo $username ?>">
+            <input required  pattern=".{4,}" type="text" id="username" name="username" value="<?php echo $username ?>">
             <span id="login-spatne-prihlaseni" class="spatne">Uživatelské jméno je příliš krátké</span>
             <?php if($login_ok == false)
             {
@@ -144,7 +144,7 @@ if(isset($_POST["submit"]))
             } ?>
             <br>
             <label for="password" >Heslo</label>
-            <input  required type="password" id="password" name="password" value="<?php echo $password ?>">
+            <input  required pattern=".{5,}" type="password" id="password" name="password" value="<?php echo $password ?>">
             <span id="heslo-spatne-prihlaseni" class="spatne">Heslo je příliš krátké</span>
             <?php if($password_ok == false)
             {
@@ -156,27 +156,27 @@ if(isset($_POST["submit"]))
 
         <form id="registracni-formular" method="post" action="prihlasit_registrovat.php">
             <label for="jmeno" >Jmeno</label>
-            <input required  type="text" id="jmeno" name="jmeno"  value="<?php echo $jmeno ?>">
+            <input required pattern=".{2,}"  type="text" id="jmeno" name="jmeno"  value="<?php echo $jmeno ?>">
             <span id="jmeno-spatne" class="spatne">Jméno je příliš krátké</span>
             <br>
             <label for="prijmeni" >Prijmeni</label>
-            <input  required type="text" id="prijmeni" name="prijmeni" value="<?php echo $prijmeni ?>">
+            <input  required pattern=".{2,}" type="text" id="prijmeni" name="prijmeni" value="<?php echo $prijmeni ?>">
             <span id="prijmeni-spatne" class="spatne">Příjmení je příliš krátké</span>
             <br>
             <label for="email" >E-mail</label>
-            <input  required type="email" id="email" name="email" value="<?php echo $email ?>">
+            <input  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" id="email" name="email" value="<?php echo $email ?>">
             <span id="email-spatne" class="spatne">Zadaný e-mail je neplatný</span>
             <br>
             <label for="telefon-cislo" >Telefon</label>
-            <input  required type="text" id="telefon-cislo" name="telefon" value="<?php echo $telefon ?>">
+            <input  required pattern="[0-9]+" type="text" id="telefon-cislo" name="telefon" value="<?php echo $telefon ?>">
             <span id="telefon-spatne" class="spatne">Telefon nemá správný formát (9 čísel)</span>
             <br>
             <label for="login" >Uzivatelske jmeno</label>
-            <input  required type="text" id="login" name="login" value="<?php echo $login ?>">
+            <input  required pattern=".{4,}" type="text" id="login" name="login" value="<?php echo $login ?>">
             <span id="login-spatne" class="spatne">Uživatelské jméno je příliš krátké</span>
             <br>
             <label for="heslo" >Heslo</label>
-            <input  required type="password" id="heslo" name="heslo" value="<?php echo $heslo ?>">
+            <input  required pattern=".{5,}" type="password" id="heslo" name="heslo" value="<?php echo $heslo ?>">
             <span id="heslo-spatne" class="spatne">Heslo je příliš krátké</span>
             <br>
             <input type="submit" name="submit" value="Registrovat se" id="submit">
