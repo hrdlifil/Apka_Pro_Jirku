@@ -79,16 +79,7 @@ function zkontrolovat_registracni_udaje(event)
     let login = document.querySelector("#login").value;
     let heslo = document.querySelector("#heslo").value;
     console.log(heslo);
-
-    if(jmeno.length < 2)
-    {
-        event.preventDefault();
-        document.querySelector("#jmeno-spatne").style.display = "inline";
-    }
-    else
-    {
-        document.querySelector("#jmeno-spatne").style.display = "none";
-    }
+    
     if(prijmeni.length < 2)
     {
         event.preventDefault();

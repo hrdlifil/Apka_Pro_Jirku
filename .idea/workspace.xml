@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d2cdd6fa-395f-4109-ad9c-8f4cf45a1e8a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autoklice.php" beforeDir="false" afterPath="$PROJECT_DIR$/autoklice.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cenik.php" beforeDir="false" afterPath="$PROJECT_DIR$/cenik.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_mobile.php" beforeDir="false" afterPath="$PROJECT_DIR$/index_mobile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muj_ucet.php" beforeDir="false" afterPath="$PROJECT_DIR$/muj_ucet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/otevirani_objektu_a_domu.php" beforeDir="false" afterPath="$PROJECT_DIR$/otevirani_objektu_a_domu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/otevirani_vozidel.php" beforeDir="false" afterPath="$PROJECT_DIR$/otevirani_vozidel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prihlasit_registrovat.js" beforeDir="false" afterPath="$PROJECT_DIR$/prihlasit_registrovat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prihlasit_registrovat.php" beforeDir="false" afterPath="$PROJECT_DIR$/prihlasit_registrovat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ztracene_klice.php" beforeDir="false" afterPath="$PROJECT_DIR$/ztracene_klice.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,17 +27,26 @@
       <file leaf-file-name="prihlasit_registrovat.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prihlasit_registrovat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="198" column="11" selection-start-line="198" selection-start-column="11" selection-end-line="198" selection-end-column="11" />
+            <state relative-caret-position="462">
+              <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+            <state relative-caret-position="630">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="muj_ucet.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/muj_ucet.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="200" column="1" selection-start-line="200" selection-start-column="1" selection-end-line="200" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -69,20 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index_mobile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index_mobile.php">
+      <file leaf-file-name="prihlasit_registrovat.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/prihlasit_registrovat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cenik.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cenik.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="75">
+              <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -99,8 +90,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+            <state relative-caret-position="514">
+              <caret line="266" column="1" lean-forward="true" selection-start-line="241" selection-end-line="266" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -140,8 +131,6 @@
         <option value="$PROJECT_DIR$/index_mobile.js" />
         <option value="$PROJECT_DIR$/e-shop.css" />
         <option value="$PROJECT_DIR$/e-shop.php" />
-        <option value="$PROJECT_DIR$/prihlasit_registrovat.js" />
-        <option value="$PROJECT_DIR$/muj_ucet.css" />
         <option value="$PROJECT_DIR$/muj_ucet.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/cenik.php" />
@@ -150,10 +139,12 @@
         <option value="$PROJECT_DIR$/index_mobile.php" />
         <option value="$PROJECT_DIR$/muj_ucet.php" />
         <option value="$PROJECT_DIR$/otevirani_objektu_a_domu.php" />
-        <option value="$PROJECT_DIR$/prihlasit_registrovat.php" />
         <option value="$PROJECT_DIR$/ztracene_klice.php" />
-        <option value="$PROJECT_DIR$/index.css" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/index.css" />
+        <option value="$PROJECT_DIR$/muj_ucet.css" />
+        <option value="$PROJECT_DIR$/prihlasit_registrovat.php" />
+        <option value="$PROJECT_DIR$/prihlasit_registrovat.js" />
       </list>
     </option>
   </component>
@@ -227,7 +218,7 @@
       <workItem from="1545850175149" duration="11520000" />
       <workItem from="1545928606182" duration="11728000" />
       <workItem from="1546025873551" duration="2832000" />
-      <workItem from="1546108051051" duration="5503000" />
+      <workItem from="1546108051051" duration="8225000" />
     </task>
     <task id="LOCAL-00001" summary="konecne pokrok">
       <created>1545523722168</created>
@@ -320,11 +311,25 @@
       <option name="project" value="LOCAL" />
       <updated>1546109710191</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="html5 tagy">
+      <created>1546118623377</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1546118623377</updated>
+    </task>
+    <task id="LOCAL-00015" summary="print styles">
+      <created>1546122549176</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1546122549176</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81410000" />
+    <option name="totallyTimeSpent" value="84132000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -332,7 +337,7 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" visible="true" weight="0.13960114" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.13960114" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49932885" visible="true" weight="0.13960114" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -372,7 +377,9 @@
     <MESSAGE value="6" />
     <MESSAGE value="7" />
     <MESSAGE value="html validace" />
-    <option name="LAST_COMMIT_MESSAGE" value="html validace" />
+    <MESSAGE value="html5 tagy" />
+    <MESSAGE value="print styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="print styles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -609,22 +616,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/muj_ucet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2163">
-          <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="104" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/muj_ucet.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prihlasit_registrovat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2373">
-          <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -637,13 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
           <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autoklice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -675,13 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prihlasit_registrovat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="198" column="11" selection-start-line="198" selection-start-column="11" selection-end-line="198" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ztracene_klice.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -689,17 +668,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.css">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+        <state relative-caret-position="630">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/autoklice.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+        <state relative-caret-position="451">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="266" column="1" lean-forward="true" selection-start-line="241" selection-end-line="266" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/muj_ucet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="200" column="1" selection-start-line="200" selection-start-column="1" selection-end-line="200" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prihlasit_registrovat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prihlasit_registrovat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
         </state>
       </provider>
     </entry>

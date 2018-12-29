@@ -71,6 +71,10 @@ if(isset($_POST["submit"]))
     $telefon_ok = false;
     $username_ok = false;
     $heslo_ok = false;
+    if (strlen($jmeno) < 1)
+    {
+        $jmeno = "John";
+    }
     if (strlen($jmeno) > 1)
     {
         $jmeno_ok = true;
@@ -155,8 +159,8 @@ if(isset($_POST["submit"]))
         </form>
 
         <form id="registracni-formular" method="post" action="prihlasit_registrovat.php">
-            <label for="jmeno" >Jmeno</label>
-            <input required pattern=".{2,}"  type="text" id="jmeno" name="jmeno"  value="<?php echo $jmeno ?>">
+            <label for="jmeno" >Jmeno (nepovine)</label>
+            <input type="text" id="jmeno" name="jmeno"  value="<?php echo $jmeno ?>">
             <span id="jmeno-spatne" class="spatne">Jméno je příliš krátké</span>
             <br>
             <label for="prijmeni" >Prijmeni</label>
