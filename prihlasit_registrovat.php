@@ -122,14 +122,14 @@ if(isset($_POST["submit"]))
 </head>
 <body>
 <div class="contain">
-    <div class="header">
+    <header class="header">
         <img id="zluta" src="images/zluta.png" alt="Žlutá"/>
         <img id="pruhy_nahore" src="images/pruhy.png" alt="Pruhy"/>
         <img id="logo" src="images/samonil.svg" alt="Jiří Šamonil"/>
         <img id="telefon" src="images/telefon.svg" alt="Telefon: 602238172"/>
 
-    </div>
-    <div class="middle">
+    </header>
+    <main class="middle">
         <div>
             <input class="prihlasit" type="button" value="prihlasit se">
             <input class="registrovat" type="button" value="registrovat se">
@@ -195,10 +195,10 @@ if(isset($_POST["submit"]))
             ?>
         </div>
 
-    </div>
-    <div class="footer">
+    </main>
+    <footer class="footer">
         <img id="pruhy" src="images/pruhy.png" alt="Pruhy">
-    </div>
+    </footer>
 </div>
 <script src="prihlasit_registrovat.js"></script>
 </body>

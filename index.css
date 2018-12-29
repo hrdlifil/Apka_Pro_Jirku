@@ -145,7 +145,7 @@ body.biggerfied-picture-visible #biggerfied-picture
         height: 120px;
     }
 
-    .middle
+    body.added_by_javascript .middle
     {
         display: grid;
         grid-template-columns: auto 170px 170px 170px auto;

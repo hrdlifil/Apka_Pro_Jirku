@@ -14,19 +14,19 @@
 </head>
 <body>
 <div class="contain">
-    <div class="header">
+    <header class="header">
         <img id="zluta" src="images/zluta.png" alt="Žlutá"/>
         <img id="pruhy_nahore" src="images/pruhy.png" alt="Pruhy"/>
         <img id="logo" src="images/samonil.svg" alt="Jiří Šamonil"/>
         <img id="telefon" src="images/telefon.svg" alt="Telefon: 602238172"/>
 
-    </div>
-    <div class="middle">
-        
-    </div>
-    <div class="footer">
+    </header>
+    <main class="middle">
+
+    </main>
+    <footer class="footer">
         <img id="pruhy" src="images/pruhy.png" alt="Pruhy">
-    </div>
+    </footer>
 </div>
 <script src="muj_ucet.js"></script>
 </body>

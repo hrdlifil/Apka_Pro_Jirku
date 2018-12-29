@@ -2,6 +2,8 @@ class Better_Navigation
 {
     constructor()
     {
+        document.body.classList.add('added_by_javascript');
+        console.log("KOKOT");
     }
 
     logo1_clicked(event)

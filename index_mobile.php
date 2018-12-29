@@ -11,14 +11,14 @@
 </head>
 <body>
 <div class="contain">
-    <div class="header">
+    <header class="header">
         <img id="zluta" src="images/zluta.png" alt="Žlutá"/>
         <img id="pruhy_nahore" src="images/pruhy.png" alt="Pruhy"/>
         <img id="logo" src="images/samonil.svg" alt="Jiří Šamonil"/>
         <img id="telefon" src="images/telefon.svg" alt="Telefon: 602238172"/>
 
-    </div>
-    <div class="middle">
+    </header>
+    <main class="middle">
             <a id="eshop-odkaz" href="prihlasit_registrovat.php">
                 <img class="loga" id="logo1" src="images/logo1.png" alt="E-shop">
             </a>
@@ -42,10 +42,10 @@
             <a id="otevirani_vozidel_odkaz" href="otevirani_vozidel.php">
                 <img class="loga" id="logo6" src="images/logo6.png" alt="Otevírání vozidel"/>
             </a>
-    </div>
-    <div class="footer">
+    </main>
+    <footer class="footer">
         <img id="pruhy" src="images/pruhy.png" alt="Pruhy">
-    </div>
+    </footer>
 </div>
 <script src="index_mobile.js"></script>
 </body>
