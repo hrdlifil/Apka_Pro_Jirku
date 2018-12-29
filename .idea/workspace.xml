@@ -4,7 +4,6 @@
     <list default="true" id="d2cdd6fa-395f-4109-ad9c-8f4cf45a1e8a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prihlasit_registrovat.js" beforeDir="false" afterPath="$PROJECT_DIR$/prihlasit_registrovat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prihlasit_registrovat.php" beforeDir="false" afterPath="$PROJECT_DIR$/prihlasit_registrovat.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,8 +71,8 @@
       <file leaf-file-name="prihlasit_registrovat.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/prihlasit_registrovat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+            <state relative-caret-position="201">
+              <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -218,7 +217,7 @@
       <workItem from="1545850175149" duration="11520000" />
       <workItem from="1545928606182" duration="11728000" />
       <workItem from="1546025873551" duration="2832000" />
-      <workItem from="1546108051051" duration="8225000" />
+      <workItem from="1546108051051" duration="8376000" />
     </task>
     <task id="LOCAL-00001" summary="konecne pokrok">
       <created>1545523722168</created>
@@ -325,11 +324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546122549176</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="rozliseni pov a nepov udaju">
+      <created>1546124141394</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1546124141394</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84132000" />
+    <option name="totallyTimeSpent" value="84283000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -379,7 +385,8 @@
     <MESSAGE value="html validace" />
     <MESSAGE value="html5 tagy" />
     <MESSAGE value="print styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="print styles" />
+    <MESSAGE value="rozliseni pov a nepov udaju" />
+    <option name="LAST_COMMIT_MESSAGE" value="rozliseni pov a nepov udaju" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,8 +712,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prihlasit_registrovat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+        <state relative-caret-position="201">
+          <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
         </state>
       </provider>
     </entry>

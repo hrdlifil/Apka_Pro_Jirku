@@ -79,7 +79,7 @@ function zkontrolovat_registracni_udaje(event)
     let login = document.querySelector("#login").value;
     let heslo = document.querySelector("#heslo").value;
     console.log(heslo);
-    
+
     if(prijmeni.length < 2)
     {
         event.preventDefault();
