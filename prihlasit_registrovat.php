@@ -56,12 +56,13 @@ if(isset($_POST["submit-prihlaseni"]))
     {
         $password_ok = true;
     }
-    if($login_ok == true and $password_ok == true)
+    if($login_ok == true and $password_ok == true and $_SESSION["odeslano_poprve_prihlaseni"])
     {
         $prihlaseni_v_pohode = prihlas($username, $heslo_k_zahashovani);
 
         if($prihlaseni_v_pohode)
         {
+            $_SESSION["odeslano_poprve_prihlaseni"] = false;
             header("Location: muj_ucet.php");
             exit;
         }
@@ -130,7 +131,7 @@ if(isset($_POST["submit"]))
         }
 
         $username_uz_existuje = false;
-        $_SESSION["odeslano_poprve"] = false;
+        $_SESSION["odeslano_poprve_registrace"] = false;
         header("Location: muj_ucet.php");
         exit;
     }else
