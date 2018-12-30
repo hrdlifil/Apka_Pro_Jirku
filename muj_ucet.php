@@ -1,10 +1,9 @@
 ﻿<?php
-/**
- * Created by PhpStorm.
- * User: filip
- * Date: 27. 12. 2018
- * Time: 2:34
- */?>
+
+session_start();
+$user = $_SESSION["user"];
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +22,7 @@
     </header>
     <main class="middle">
 
+        <h1> jste prihlasen jako <?php echo htmlentities($user->username);?></h1>
     </main>
     <footer class="footer">
         <img id="pruhy" src="images/pruhy.png" alt="Pruhy">
