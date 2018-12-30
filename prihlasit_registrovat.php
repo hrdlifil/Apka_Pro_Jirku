@@ -1,4 +1,7 @@
 ﻿<?php
+session_start();
+$_SESSION["odeslano_poprve_registrace"] = true;
+$_SESSION["odeslano_poprve_prihlaseni"] = true;
 $username_uz_existuje = false;
 $neprihlasen = false;
 $login_ok = true;
@@ -20,6 +23,24 @@ function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
     $stmt = $pdo->prepare("insert into uzivatele(jmeno,prijmeni,telefon,email,username,heslo) values(:jmeno,:prijmeni,:telefon,:email,:username,:heslo)");
     $stmt->execute(["jmeno" => $jmeno, "prijmeni" => $prijmeni,"telefon"=> $telefon ,"email" => $email, "username" => $username, "heslo" => $zahashovane_heslo]);
 }
+function prihlas($username, $heslo_k_zahashovani)
+{
+    $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
+    $pdo = new PDO($dsn, "root", "mP4oxnt11");
+    $stmt = $pdo->prepare("select * from uzivatele where username=:login");
+    $stmt->execute(["login" => $username]);
+    $user = $stmt->fetch(PDO::FETCH_OBJ);
+
+    if($user != null and password_verify($heslo_k_zahashovani, $user->heslo))
+    {
+        $neprihlasen = false;
+        $_SESSION["user"] = $user;
+        return true;
+    }
+
+    return false;
+}
+
 if(isset($_POST["submit-prihlaseni"]))
 {
     $login_ok = false;
@@ -37,20 +58,14 @@ if(isset($_POST["submit-prihlaseni"]))
     }
     if($login_ok == true and $password_ok == true)
     {
-        $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
-        $pdo = new PDO($dsn, "root", "mP4oxnt11");
-        $stmt = $pdo->prepare("select * from uzivatele where username=:login");
-        $hashed = password_hash($heslo_k_zahashovani, PASSWORD_DEFAULT);
-        $stmt->execute(["login" => $username]);
-        $user = $stmt->fetch(PDO::FETCH_OBJ);
-        if($user != null and password_verify($heslo_k_zahashovani, $user->heslo))
+        $prihlaseni_v_pohode = prihlas($username, $heslo_k_zahashovani);
+
+        if($prihlaseni_v_pohode)
         {
-            $neprihlasen = false;
-            session_start();
-            $_SESSION["user"] = $user;
             header("Location: muj_ucet.php");
             exit;
         }
+
         else
         {
             $neprihlasen = true;
@@ -73,7 +88,7 @@ if(isset($_POST["submit"]))
     $heslo_ok = false;
     if (strlen($jmeno) < 1)
     {
-        $jmeno = "John";
+        $jmeno = "nevyplneno";
     }
     if (strlen($jmeno) > 1)
     {
@@ -104,10 +119,18 @@ if(isset($_POST["submit"]))
     {
         $username_ok = true;
     }
-    if ($jmeno_ok and $prijmeni_ok and $telefon_ok and $email_ok and $heslo_ok and $username_ok)
+    if ($jmeno_ok and $prijmeni_ok and $telefon_ok and $email_ok and $heslo_ok and $username_ok and $_SESSION["odeslano_poprve_registrace"])
     {
-        zaregistruj($jmeno, $prijmeni, $telefon, $email, $login, $heslo);
+        try
+        {
+            zaregistruj($jmeno, $prijmeni, $telefon, $email, $login, $heslo);
+        }catch (Exception $exception)
+        {
+            die("neco se posralo");
+        }
+
         $username_uz_existuje = false;
+        $_SESSION["odeslano_poprve"] = false;
         header("Location: muj_ucet.php");
         exit;
     }else
