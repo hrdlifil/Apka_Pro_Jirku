@@ -15,7 +15,7 @@ function fetch_users()
             let na_vypis = "";
             for (let i = 0; i <result.length; i++)
             {
-                na_vypis += result[i] + "<br>";
+                na_vypis += html_entities(result[i] )+ "<br>";
             }
             document.getElementById("vypis").innerHTML = na_vypis;
             console.log(result.length);
@@ -24,4 +24,9 @@ function fetch_users()
     xhr.send();
 
 
+}
+
+function html_entities(str)
+{
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }

@@ -17,7 +17,7 @@ $user = $stmt->fetchAll();
 foreach ($user as $kokot)
 {
 
-    $pole_jmen[] = $kokot[1];
+    $pole_jmen[] = htmlentities($kokot[1]);
 }
 
 $json = json_encode($pole_jmen);
