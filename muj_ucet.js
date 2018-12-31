@@ -1,0 +1,27 @@
+let max = 0;
+let dalsi = document.querySelector(".dalsi");
+dalsi.addEventListener("click" , fetch_users);
+
+function fetch_users()
+{
+    max +=4;
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET","paginace.php?max=" + max, true );
+    xhr.onload = function ()
+    {
+        if (xhr.status === 200)
+        {
+            let result = JSON.parse(xhr.responseText);
+            let na_vypis = "";
+            for (let i = 0; i <result.length; i++)
+            {
+                na_vypis += result[i] + "<br>";
+            }
+            document.getElementById("vypis").innerHTML = na_vypis;
+            console.log(result.length);
+        }
+    };
+    xhr.send();
+
+
+}

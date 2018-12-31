@@ -23,6 +23,8 @@ $user = $_SESSION["user"];
     <main class="middle">
 
         <h1> jste prihlasen jako <?php echo htmlentities($user->username);?></h1>
+        <div id="vypis"></div>
+        <button class="dalsi">zobrazit dalsi</button>
     </main>
     <footer class="footer">
         <img id="pruhy" src="images/pruhy.png" alt="Pruhy">
