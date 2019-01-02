@@ -1,5 +1,8 @@
 ﻿<?php
-session_start();
+if(session_status()!=PHP_SESSION_ACTIVE)
+{
+    session_start();
+}
 $_SESSION["odeslano_poprve_registrace"] = true;
 $_SESSION["odeslano_poprve_prihlaseni"] = true;
 $username_uz_existuje = false;
@@ -91,7 +94,7 @@ if(isset($_POST["submit"]))
     {
         $jmeno = "nevyplneno";
     }
-    if (strlen($jmeno) > 1)
+    if (strlen($jmeno) >= 1)
     {
         $jmeno_ok = true;
     }
@@ -131,13 +134,24 @@ if(isset($_POST["submit"]))
         }
 
         $username_uz_existuje = false;
+
         $_SESSION["odeslano_poprve_registrace"] = false;
+
+        $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
+        $pdo = new PDO($dsn, "root", "mP4oxnt11");
+        $stmt = $pdo->prepare("select * from uzivatele where username=:login");
+        $stmt->execute(["login" => $login]);
+        $user = $stmt->fetch(PDO::FETCH_OBJ);
+        $_SESSION["user"] = $user;
+
+
+
         header("Location: muj_ucet.php");
         exit;
     }else
-        {
-            $username_uz_existuje = true;
-        }
+    {
+        $username_uz_existuje = true;
+    }
 }
 ?>
 
@@ -172,7 +186,7 @@ if(isset($_POST["submit"]))
             } ?>
             <br>
             <label for="password" >Heslo</label>
-            <input  required pattern=".{5,}" type="password" id="password" name="password" value="<?php echo $password ?>">
+            <input  required pattern=".{5,}" type="password" id="password" name="password">
             <span id="heslo-spatne-prihlaseni" class="spatne">Heslo je příliš krátké</span>
             <?php if($password_ok == false)
             {
@@ -204,7 +218,7 @@ if(isset($_POST["submit"]))
             <span id="login-spatne" class="spatne">Uživatelské jméno je příliš krátké</span>
             <br>
             <label for="heslo" >Heslo</label>
-            <input  required pattern=".{5,}" type="password" id="heslo" name="heslo" value="<?php echo $heslo ?>">
+            <input  required pattern=".{5,}" type="password" id="heslo" name="heslo">
             <span id="heslo-spatne" class="spatne">Heslo je příliš krátké</span>
             <br>
             <input type="submit" name="submit" value="Registrovat se" id="submit">
