@@ -1,5 +1,8 @@
 ﻿<?php
-session_start();
+if(session_status()!=PHP_SESSION_ACTIVE)
+{
+    session_start();
+}
 $_SESSION["odeslano_poprve_registrace"] = true;
 $_SESSION["odeslano_poprve_prihlaseni"] = true;
 $username_uz_existuje = false;
