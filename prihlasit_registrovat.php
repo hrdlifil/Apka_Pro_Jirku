@@ -1,6 +1,7 @@
 ﻿<?php
 session_start();
 
+
 /*!
  * Slouzi k overeni, ze je registrovaci formular odesilan poprve. Pote, co je odeslan, se nastavi na false.
  */
@@ -35,8 +36,8 @@ function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
 {
     $heslo_na_hashovani = $username.$heslo;
     $zahashovane_heslo = password_hash($heslo_na_hashovani, PASSWORD_DEFAULT);
-    $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
-    $pdo = new PDO($dsn, "root", "mP4oxnt11");
+    $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil";
+    $pdo = new PDO($dsn, "hrdlifil", "webove aplikace");
     $stmt = $pdo->prepare("insert into uzivatele(jmeno,prijmeni,telefon,email,username,heslo) values(:jmeno,:prijmeni,:telefon,:email,:username,:heslo)");
     $stmt->execute(["jmeno" => $jmeno, "prijmeni" => $prijmeni,"telefon"=> $telefon ,"email" => $email, "username" => $username, "heslo" => $zahashovane_heslo]);
 }
@@ -46,8 +47,8 @@ function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
  */
 function prihlas($username, $heslo_k_zahashovani)
 {
-    $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
-    $pdo = new PDO($dsn, "root", "mP4oxnt11");
+    $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil";
+    $pdo = new PDO($dsn, "hrdlifil", "webove aplikace");
     $stmt = $pdo->prepare("select * from uzivatele where username=:login");
     $stmt->execute(["login" => $username]);
     $user = $stmt->fetch(PDO::FETCH_OBJ);
@@ -152,8 +153,8 @@ if(isset($_POST["submit"]))
     {
         $heslo_ok = true;
     }
-    $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
-    $pdo = new PDO($dsn, "root", "mP4oxnt11");
+    $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil";
+    $pdo = new PDO($dsn, "hrdlifil", "webove aplikace");
     $stmt = $pdo->prepare("select * from uzivatele where username=:login");
     $stmt->execute(["login" => $login]);
     $user = $stmt->fetch();
@@ -178,8 +179,8 @@ if(isset($_POST["submit"]))
 
         $_SESSION["odeslano_poprve_registrace"] = false;
 
-        $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
-        $pdo = new PDO($dsn, "root", "mP4oxnt11");
+        $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil";
+        $pdo = new PDO($dsn, "hrdlifil", "webove aplikace");
         $stmt = $pdo->prepare("select * from uzivatele where username=:login");
         $stmt->execute(["login" => $login]);
         $user = $stmt->fetch(PDO::FETCH_OBJ);
@@ -219,45 +220,45 @@ if(isset($_POST["submit"]))
         </div>
         <form id="prihlasovaci-formular" method="post" action="prihlasit_registrovat.php">
             <label for="username" >Uzivatelske jmeno</label>
-            <input required  pattern=".{4,}" type="text" id="username" name="username" value="<?php echo $username ?>">
+            <input required  pattern=".{4,}" type="text" id="username" name="username" value="<?php echo $username; ?>">
             <span id="login-spatne-prihlaseni" class="spatne">Uživatelské jméno je příliš krátké</span>
             <?php if($login_ok == false)
-            {
-                echo "<span>Uživatelské jméno je příliš krátké</span>";
-            }
-            ?>
+    {
+        echo "<span>Uživatelské jméno je příliš krátké</span>";
+    }
+    ?>
             <br>
             <label for="password" >Heslo</label>
             <input  required pattern=".{5,}" type="password" id="password" name="password">
             <span id="heslo-spatne-prihlaseni" class="spatne">Heslo je příliš krátké</span>
             <?php if($password_ok == false)
-            {
-                echo " <span>Heslo je příliš krátké</span>";
-            }
-            ?>
+    {
+        echo " <span>Heslo je příliš krátké</span>";
+    }
+    ?>
             <br>
             <input type="submit" name="submit-prihlaseni" value="prihlasit se" id="prihlas">
         </form>
 
         <form id="registracni-formular" method="post" action="prihlasit_registrovat.php">
             <label for="jmeno" >Jmeno (nepovine)</label>
-            <input type="text" id="jmeno" name="jmeno"  value="<?php echo $jmeno ?>">
+            <input type="text" id="jmeno" name="jmeno"  value="<?php echo $jmeno; ?>">
             <span id="jmeno-spatne" class="spatne">Jméno je příliš krátké</span>
             <br>
             <label for="prijmeni" >Prijmeni</label>
-            <input  required pattern=".{2,}" type="text" id="prijmeni" name="prijmeni" value="<?php echo $prijmeni ?>">
+            <input  required pattern=".{2,}" type="text" id="prijmeni" name="prijmeni" value="<?php echo $prijmeni; ?>">
             <span id="prijmeni-spatne" class="spatne">Příjmení je příliš krátké</span>
             <br>
             <label for="email" >E-mail</label>
-            <input  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" id="email" name="email" value="<?php echo $email ?>">
+            <input  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" id="email" name="email" value="<?php echo $email; ?>">
             <span id="email-spatne" class="spatne">Zadaný e-mail je neplatný</span>
             <br>
             <label for="telefon-cislo" >Telefon</label>
-            <input  required pattern="[0-9]+" type="text" id="telefon-cislo" name="telefon" value="<?php echo $telefon ?>">
+            <input  required pattern="[0-9]+" type="text" id="telefon-cislo" name="telefon" value="<?php echo $telefon; ?>">
             <span id="telefon-spatne" class="spatne">Telefon nemá správný formát (9 čísel)</span>
             <br>
             <label for="login" >Uzivatelske jmeno</label>
-            <input  required pattern=".{4,}" type="text" id="login" name="login" value="<?php echo $login ?>">
+            <input  required pattern=".{4,}" type="text" id="login" name="login" value="<?php echo $login; ?>">
             <span id="login-spatne" class="spatne">Uživatelské jméno je příliš krátké</span>
             <br>
             <label for="heslo" >Heslo</label>
@@ -269,15 +270,15 @@ if(isset($_POST["submit"]))
         </form>
         <div class="msg-username-existuje">
             <?php
-            if ($username_uz_existuje)
-            {
-                echo "Uzivatelske jmeno jiz existuje, zadejte prosim jine";
-            }
-            if($neprihlasen and isset($_POST["submit-prihlaseni"]))
-            {
-                echo "Přihlášení se nezdařilo";
-            }
-            ?>
+    if ($username_uz_existuje)
+    {
+        echo "Uzivatelske jmeno jiz existuje, zadejte prosim jine";
+    }
+    if($neprihlasen and isset($_POST["submit-prihlaseni"]))
+    {
+        echo "Přihlášení se nezdařilo";
+    }
+    ?>
         </div>
 
     </main>

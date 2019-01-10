@@ -5,8 +5,8 @@
  */
 
 $max = $_REQUEST["max"];
-$dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
-$pdo = new PDO($dsn, "root", "mP4oxnt11");
+$dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil";
+$pdo = new PDO($dsn, "hrdlifil", "webove aplikace");
 $stmt = $pdo->prepare("select * from uzivatele where id <=:id");
 $stmt->execute(["id" => $max]);
 $user = $stmt->fetchAll();
