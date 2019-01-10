@@ -64,6 +64,9 @@ img#zluta
 
 }
 
+/*
+Logo a telefon se pri male sirce viewportu (v px) zobrazi uprostred horni listy
+ */
 #logo
 {
 
@@ -94,7 +97,9 @@ img#zluta
 
 
 
-
+/*
+ * Pri velke sirce viewportu (v px) se logo zobrazi vlevo a telefon vpravo
+ */
 @media (min-width: 1124px)
 {
 

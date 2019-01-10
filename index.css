@@ -131,6 +131,9 @@ body.biggerfied-picture-visible #biggerfied-picture
     visibility: visible;
 }
 
+/*!
+* Pri velke sirce viewportu (v px) se logo zobrazi vlevo a telefon vpravo
+*/
 @media (min-width: 1124px)
 {
 

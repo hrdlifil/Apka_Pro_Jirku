@@ -1,11 +1,21 @@
 ﻿<?php
-if(session_status()!=PHP_SESSION_ACTIVE)
-{
-    session_start();
-}
+session_start();
+
+/*!
+ * Slouzi k overeni, ze je registrovaci formular odesilan poprve. Pote, co je odeslan, se nastavi na false.
+ */
 $_SESSION["odeslano_poprve_registrace"] = true;
+
+/*!
+ * Slouzi k overeni, ze je prihlasovaci formular odesilan poprve. Pote, co je odeslan, se nastavi na false.
+ */
 $_SESSION["odeslano_poprve_prihlaseni"] = true;
+
+/*!
+ * Nastavi se na true, pokud je pri registraci zjisteno, ze zadane uzivatelske jmeno uz pouziva nejaky uzivatel
+ */
 $username_uz_existuje = false;
+
 $neprihlasen = false;
 $login_ok = true;
 $password_ok = true;
@@ -17,6 +27,10 @@ $email = "";
 $telefon = "";
 $login = "";
 $heslo = "";
+
+/*!
+ * Vlozi do databaze noveho uzivatele se zahashovanym heslem
+ */
 function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
 {
     $heslo_na_hashovani = $username.$heslo;
@@ -26,6 +40,10 @@ function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
     $stmt = $pdo->prepare("insert into uzivatele(jmeno,prijmeni,telefon,email,username,heslo) values(:jmeno,:prijmeni,:telefon,:email,:username,:heslo)");
     $stmt->execute(["jmeno" => $jmeno, "prijmeni" => $prijmeni,"telefon"=> $telefon ,"email" => $email, "username" => $username, "heslo" => $zahashovane_heslo]);
 }
+
+/*!
+ * Precte z databaze zaznam o uzivateli s danym uziv. jmenem
+ */
 function prihlas($username, $heslo_k_zahashovani)
 {
     $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
@@ -34,6 +52,10 @@ function prihlas($username, $heslo_k_zahashovani)
     $stmt->execute(["login" => $username]);
     $user = $stmt->fetch(PDO::FETCH_OBJ);
 
+    /*!
+     * Porovna, jestli zahashovane heslo zadane uzivatelem odpovida heslu v databazi.
+     * Pokud ano, prihlasi uzivatele - ulozi ho do session
+     */
     if($user != null and password_verify($heslo_k_zahashovani, $user->heslo))
     {
         $neprihlasen = false;
@@ -44,6 +66,11 @@ function prihlas($username, $heslo_k_zahashovani)
     return false;
 }
 
+/*!
+ * Podminka spustena, pokud je odeslan prihlasovaci formular ($_POST["submit-prihlaseni"])\n
+ * Pokud uzivatel stisknul tlacitko prihlaseni, zkontroluji se udaje, ktere zadal
+ * a pokud jsou v poradku a je overeno pomoci session, ze formular je odeslan poprve, uzivatel je prihlasen
+ */
 if(isset($_POST["submit-prihlaseni"]))
 {
     $login_ok = false;
@@ -76,6 +103,16 @@ if(isset($_POST["submit-prihlaseni"]))
         }
     }
 }
+
+/*!
+ * Podminka spustena, pokud je odeslan registracni formular ($_POST["submit"])\n
+ * Pokud uzivatel potvrdil registraci, zkontroluji se udaje, ktere zadal a zjisti se, zda se uz v databazi
+ * nachazi uzivatel se stejnym uziv. jmenem.\n
+ * Pokud v databazi neni zadny uzivatel se stejnym uziv. jmenem, vsechny udaje jsou v poradku
+ * a pomoci sessions je zkontrolovano, ze je formular odeslan poprve, je provedena registrace.\n
+ * Po registraci se uzivatel stahne z databaze a je ulozen do session, protoze na strance muj_ucet.php
+ * je potreba vypsat jeho jmeno prectene ze session, stejne jako u prihlaseni
+*/
 if(isset($_POST["submit"]))
 {
     $jmeno = $_POST["jmeno"];
@@ -90,6 +127,7 @@ if(isset($_POST["submit"]))
     $telefon_ok = false;
     $username_ok = false;
     $heslo_ok = false;
+
     if (strlen($jmeno) < 1)
     {
         $jmeno = "nevyplneno";
@@ -119,12 +157,15 @@ if(isset($_POST["submit"]))
     $stmt = $pdo->prepare("select * from uzivatele where username=:login");
     $stmt->execute(["login" => $login]);
     $user = $stmt->fetch();
+
     if ($user == null)
     {
         $username_ok = true;
     }
+
     if ($jmeno_ok and $prijmeni_ok and $telefon_ok and $email_ok and $heslo_ok and $username_ok and $_SESSION["odeslano_poprve_registrace"])
     {
+
         try
         {
             zaregistruj($jmeno, $prijmeni, $telefon, $email, $login, $heslo);
@@ -183,7 +224,8 @@ if(isset($_POST["submit"]))
             <?php if($login_ok == false)
             {
                 echo "<span>Uživatelské jméno je příliš krátké</span>";
-            } ?>
+            }
+            ?>
             <br>
             <label for="password" >Heslo</label>
             <input  required pattern=".{5,}" type="password" id="password" name="password">
@@ -191,7 +233,8 @@ if(isset($_POST["submit"]))
             <?php if($password_ok == false)
             {
                 echo " <span>Heslo je příliš krátké</span>";
-            } ?>
+            }
+            ?>
             <br>
             <input type="submit" name="submit-prihlaseni" value="prihlasit se" id="prihlas">
         </form>

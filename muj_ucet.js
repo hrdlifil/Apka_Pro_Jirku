@@ -2,6 +2,7 @@ let max = 0;
 let dalsi = document.querySelector(".dalsi");
 dalsi.addEventListener("click" , fetch_users);
 
+// Ziska z XHR JSON, ktery obsahuje jmena uzivatelu, ta vypise do divu s id vypis
 function fetch_users()
 {
     max +=4;

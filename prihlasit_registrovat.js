@@ -6,6 +6,7 @@ let prihlasovaci_formular = document.querySelector("#prihlasovaci-formular");
 let prihlasit_se_btn = document.querySelector(".prihlasit");
 let registrovat_se_btn = document.querySelector(".registrovat");
 
+// Prihlasovaci a registracni formular se zobrazuji na stejne strance, prepina se mezi nimi pomoci tlacitek
 prihlasit_se_btn.addEventListener("click", zobrazit_prihlasovaci_formular);
 registrovat_se_btn.addEventListener("click", zobrazit_registrovaci_formular);
 
@@ -44,6 +45,7 @@ function zobrazit_registrovaci_formular(event)
 
 }
 
+// Pokud uzivatel zada nejaky nevalidni udaj, je zabraneno odeslani formulare a vypise se mu, co zadal spatne
 function zkontrolovat_prihlasovaci_udaje(event)
 {
     let username = document.querySelector("#username").value;
@@ -69,6 +71,10 @@ function zkontrolovat_prihlasovaci_udaje(event)
     }
 }
 
+/*
+ * Pokud uzivatel zada nejaky nevalidni udaj, je zabraneno odeslani formulare a vypise se mu, co zadal spatne
+ * Jedine jmeno se nekontroluje, protoze je nepovinne
+ */
 function zkontrolovat_registracni_udaje(event)
 {
     let jmeno = document.querySelector("#jmeno").value;

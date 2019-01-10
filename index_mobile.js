@@ -38,11 +38,6 @@ class Better_Navigation
         document.body.classList.add('biggerfied-picture-visible');
     }
 
-    /*  debiggerfyPicture(event)
-      {
-          document.body.classList.remove('biggerfied-picture-visible');
-      }*/
-
     give_event_listeners()
     {
         document.querySelector("#logo1").addEventListener("click", this.logo1_clicked);
@@ -101,8 +96,7 @@ class Better_Navigation
     }
 }
 
-// vytvori objekt ktery zlepsi navigaci tak, ze nebudu muset klikat primo na odkaz a ale staci mi kliknout na li
-
+// Vytvori objekt, ktery zlepsi navigaci tak, ze nebudu muset klikat primo na odkaz, ale staci mi kliknout na li
 
 let better_navigation = new Better_Navigation();
 better_navigation.give_event_listeners();

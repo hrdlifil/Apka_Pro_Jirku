@@ -1,6 +1,10 @@
 ﻿<?php
-
+ob_start();
 session_start();
+
+/*!
+ * Z objektu ze session se precte uzivatelske jmeno, ktere se vypise po prihlaseni nebo registraci
+ */
 $user = $_SESSION["user"];
 
  ?>

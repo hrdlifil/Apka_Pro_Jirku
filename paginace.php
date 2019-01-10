@@ -1,13 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: filip
- * Date: 31. 12. 2018
- * Time: 0:18
+
+/*! \file paginace.php
+ * Z databaze se precte nejaky pocet uzivatelu, jejich jmena se pridaji do pole a to je vraceno jako JSON
  */
 
 $max = $_REQUEST["max"];
-
 $dsn = "mysql:host=localhost;dbname=apka_pro_jirku_db";
 $pdo = new PDO($dsn, "root", "mP4oxnt11");
 $stmt = $pdo->prepare("select * from uzivatele where id <=:id");

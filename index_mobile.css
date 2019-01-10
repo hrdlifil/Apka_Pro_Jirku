@@ -130,6 +130,9 @@ body.biggerfied-picture-visible #biggerfied-picture
     visibility: visible;
 }
 
+/*!
+ * Zobrazeni stranek pri velke sirce viewportu (v px)
+ */
 @media (min-width: 1124px)
 {
 
@@ -190,7 +193,9 @@ body.biggerfied-picture-visible #biggerfied-picture
 
     }
 
-
+    /*!
+     * Logo se zobrazi v leve casti stranky, telefon v prave
+     */
     #logo
     {
         height: 70px;

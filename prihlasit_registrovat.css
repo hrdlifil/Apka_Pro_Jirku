@@ -66,6 +66,9 @@ img#zluta
 
 }
 
+/*!
+ * Logo a telefon se pri mensi sirce viewportu (v px) zobrazuji uprostred horni listy
+ */
 #logo
 {
 
@@ -99,7 +102,9 @@ img#zluta
 
 
 
-
+/*!
+ * Pri velke sirce viewportu (v px) se logo zobrazi vlevo a telefon vpravo
+ */
 @media (min-width: 1124px)
 {
     .header
@@ -147,6 +152,10 @@ img#zluta
 
 }
 
+/*
+ * Registracni formular je nejdriv skryt, zobrazuje se prihlasovaci,
+ * na registracni je potreba se prepnout Javascriptem
+ */
 #registracni-formular
 {
     display: none;
