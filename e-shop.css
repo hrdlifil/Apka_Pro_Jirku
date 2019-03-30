@@ -17,6 +17,8 @@ body
     height: 100%;
 }
 
+
+
 .contain
 {
     display: flex;
@@ -130,7 +132,8 @@ Logo a telefon se pri male sirce viewportu (v px) zobrazi uprostred horni listy
         width: 225px;
         position: fixed;
         top: 0.8vh;
-        right: 3vw;
+        right: 4vw;
+        transform: translateX(100px);
         margin-right: 0;
 
 

@@ -1,29 +1,18 @@
-<svg id="Vrstva_1" data-name="Vrstva 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.51 13.93">
+<svg id="Vrstva_1" data-name="Vrstva 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251.29 51.6">
   <defs>
     <style>
-      .cls-1, .cls-2 {
-        isolation: isolate;
-        font-size: 11.3px;
-        font-family: Arial-Black, Arial Black;
-      }
-
       .cls-1 {
-        fill: #f21d2f;
+        fill: #fff;
       }
 
       .cls-2 {
+        font-size: 20.05px;
         fill: #231f20;
-        letter-spacing: -0.06em;
-      }
-
-      .cls-3 {
-        letter-spacing: 0em;
+        font-family: Arial-Black, Arial Black;
       }
     </style>
   </defs>
   <title>telefon</title>
-  <g>
-    <text class="cls-1" transform="translate(26.11 10.47)">602 238 172</text>
-    <text class="cls-2" transform="translate(0 9.7)">T<tspan class="cls-3" x="7.48" y="0">el:</tspan></text>
-  </g>
+  <rect class="cls-1" width="251.29" height="51.6"/>
+  <text class="cls-2" transform="translate(1.61 32.71)">TEL: +420 607 238 172</text>
 </svg>

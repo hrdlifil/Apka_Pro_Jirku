@@ -11,33 +11,47 @@ html
     background-image: url("images/dark.png");
     background-repeat: no-repeat;
     background-position: center;
+
 }
 body
 {
     height: 100%;
 }
 
+#o-nas-logo{
+    width: 190px;
+    height: 65px;
+}
+
+#kontakt-logo{
+    width: 240px;
+    height: 65px;
+}
+
 .contain
 {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .header
 {
-    position: relative;
-    overflow: hidden;
-    height: 151px;
-
+    min-height: 151px;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
 }
+
 .middle
 {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 2;
+    overflow: scroll;
 }
+
 
 img#pruhy
 {
@@ -59,7 +73,7 @@ img#pruhy
 img#zluta
 {
     position: fixed;
-    height: 130px;
+    height: 80px;
     width: 100%;
 
 }
@@ -67,24 +81,24 @@ img#zluta
 #logo
 {
 
-    width: 310.8px;
+    width: 250px;
     height: 81.66px;
     position: fixed;
-    left: 50%;
-    margin-left: -155.4px ;
+    left: calc(50vw - 125px);
 
-    top: 15px;
+    top: 0;
 }
+
 
 #telefon
 {
-    width: 310.8px;
-    height: 42.65px;
-    position: fixed;
-    right: 50%;
-    margin-right: -155.4px ;
+    width: 250px;
+    height: 47px;
+    position: absolute;
+    left: calc(50vw - 125px);
+    margin-top: 0;
 
-    top: 95px;
+    top: 82px;
 
 }
 
@@ -99,18 +113,19 @@ img#zluta
 #biggerfied-picture
 {
     width: 100%;
-    height: calc(100% - 173px);
+    height: 100%;
     filter: blur(0px) grayscale(0%);
     transform: scale(0);
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
     position: fixed;
-    top: 151px;
+    top: 150px;
     left: 0;
-    background-color: #323436;
+    background-color: white;
     visibility: hidden;
     z-index: 9001;
+    overflow: scroll;
 }
 
 #cross
@@ -125,6 +140,43 @@ img#zluta
     z-index: 9001;
 }
 
+#paragraph
+{
+    margin-top: 5vh;
+    margin-bottom: 22vh;
+    margin-left: 12vw;
+    margin-right: 12vw;
+    z-index: 9002;
+    font-size: 1.2rem;
+}
+
+#first-ul
+{
+    font-size: 1.3rem;
+}
+
+#paragraph-headline
+{
+    text-decoration: underline;
+    text-align: center;
+}
+
+ul
+{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+#pica{
+    width: 100vw;
+}
+
+#demeter{
+    width: 100vw;
+}
+
+
+
 body.biggerfied-picture-visible #biggerfied-picture
 {
     transform: scale(1);
@@ -134,28 +186,66 @@ body.biggerfied-picture-visible #biggerfied-picture
 /*!
 * Pri velke sirce viewportu (v px) se logo zobrazi vlevo a telefon vpravo
 */
-@media (min-width: 1124px)
+@media (min-width: 924px)
 {
+
+
+#demeter{
+    position: fixed;
+    left: 10px;
+    bottom: 0;
+
+    height: 50px;
+    width: 400px;
+}
+
+#pica{
+    height: 50px;
+    width: 400px;
+    position: fixed;
+    top: calc(100% - 89px);
+    left: 10px;
+}
+#kontakt-logo{
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    width: 130px;
+    height: 50px;
+}
+    #o-nas-logo{
+        position: fixed;
+        right: 16px;
+        width: 90px;
+        height: 45px;
+
+        bottom: calc(0% + 40px);
+    }
+
 
     #biggerfied-picture
     {
         top: 88.5px;
-        height: calc(100% - 110.5px);
+
+        height: calc(100% - 80.5px);
     }
 
     .header
     {
-        height: 120px;
+        min-height: 90.51px;
     }
 
-    body.added_by_javascript .middle
+    .middle
     {
+        position: relative;
+        top: -30px;
         display: grid;
         grid-template-columns: auto 170px 170px 170px auto;
         grid-template-rows: auto 200px 200px auto;
         grid-row-gap: 50px;
         grid-column-gap: 60px;
 
+        overflow: hidden;
         grid-template-areas: "m m m m m "
         ". l1 l2 l3 ."
         ". l4 l5 l6 ."
@@ -195,36 +285,20 @@ body.biggerfied-picture-visible #biggerfied-picture
     }
 
 
-    #logo
-    {
-        height: 70px;
-        width: 225px;
-        position: fixed;
-        top: 0;
-        left: 3vw;
-        margin-left: 0;
-    }
+
 
     #telefon
     {
-        height: 70px;
-        width: 225px;
+        height: 67px;
+        width: 200px;
         position: fixed;
-        top: 0.8vh;
-        right: 3vw;
+        top: 8px;
+        left: calc(100vw - 210px);
         margin-right: 0;
-
-
-    }
-
-    #pruhy_nahore
-    {
-
-        height: 22.63px;
-        position: fixed;
-        top: 67px;
+        margin-top: 0;
 
     }
+
 
     .loga
     {
@@ -236,35 +310,16 @@ body.biggerfied-picture-visible #biggerfied-picture
 
     img#zluta
     {
-        width: 100%;
-        height: 67.89px;
+        left: calc(50vw - 300px);
+        width: 600px;
+        height: 90px;
     }
 
-}
-
-@media print
-{
-    html
+    #paragraph
     {
-        height: 100%;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-bottom: 0vh;
     }
-
-    .middle
-    {
-
-        flex-direction: row;
-
-
-
-    }
-    .loga
-    {
-        width: 130px;
-        height: 160px;
-        margin-top: 50%;
-        margin-bottom: 0;
-    }
-
-
 
 }

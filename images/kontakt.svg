@@ -1,0 +1,26 @@
+<svg id="Vrstva_1" data-name="Vrstva 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 203.92 47.66">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-size: 34.12px;
+        fill: #231f20;
+        font-family: Arial-Black, Arial Black;
+      }
+
+      .cls-3 {
+        letter-spacing: -0.03em;
+      }
+
+      .cls-4 {
+        letter-spacing: -0.07em;
+      }
+    </style>
+  </defs>
+  <title>kontakt</title>
+  <rect class="cls-1" width="203.92" height="47.66"/>
+  <text class="cls-2" transform="translate(9.24 34.75)"><tspan class="cls-3">K</tspan><tspan x="27.25" y="0">ON</tspan><tspan class="cls-4" x="84.09" y="0">T</tspan><tspan x="106.42" y="0">AKT</tspan></text>
+</svg>

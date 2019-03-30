@@ -36,7 +36,7 @@ function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
 {
     $heslo_na_hashovani = $username.$heslo;
     $zahashovane_heslo = password_hash($heslo_na_hashovani, PASSWORD_DEFAULT);
-    $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil";
+    $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil;port=22";
     $pdo = new PDO($dsn, "hrdlifil", "webove aplikace");
     $stmt = $pdo->prepare("insert into uzivatele(jmeno,prijmeni,telefon,email,username,heslo) values(:jmeno,:prijmeni,:telefon,:email,:username,:heslo)");
     $stmt->execute(["jmeno" => $jmeno, "prijmeni" => $prijmeni,"telefon"=> $telefon ,"email" => $email, "username" => $username, "heslo" => $zahashovane_heslo]);
@@ -47,7 +47,7 @@ function zaregistruj($jmeno, $prijmeni, $telefon, $email, $username, $heslo)
  */
 function prihlas($username, $heslo_k_zahashovani)
 {
-    $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil";
+    $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil;port=22";
     $pdo = new PDO($dsn, "hrdlifil", "webove aplikace");
     $stmt = $pdo->prepare("select * from uzivatele where username=:login");
     $stmt->execute(["login" => $username]);
@@ -153,7 +153,7 @@ if(isset($_POST["submit"]))
     {
         $heslo_ok = true;
     }
-    $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil";
+    $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil;port=22";
     $pdo = new PDO($dsn, "hrdlifil", "webove aplikace");
     $stmt = $pdo->prepare("select * from uzivatele where username=:login");
     $stmt->execute(["login" => $login]);
@@ -179,7 +179,7 @@ if(isset($_POST["submit"]))
 
         $_SESSION["odeslano_poprve_registrace"] = false;
 
-        $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil";
+        $dsn = "mysql:host=wa.toad.cz;dbname=hrdlifil;port=22";
         $pdo = new PDO($dsn, "hrdlifil", "webove aplikace");
         $stmt = $pdo->prepare("select * from uzivatele where username=:login");
         $stmt->execute(["login" => $login]);
